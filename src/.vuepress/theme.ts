@@ -87,6 +87,10 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
 
+    //语法高亮
+    highlighter:{
+      type:"shiki",
+    },
     // 取消注释它们如果你需要 TeX 支持
     // math: {
     //   // 启用前安装 katex
@@ -148,7 +152,7 @@ export default hopeTheme({
     icon: {
       // assets: "iconify",
       assets: [
-        "//at.alicdn.com/t/c/font_5120858_qm8na0gsf2q.css"
+        "//at.alicdn.com/t/c/font_5120858_qm8na0gsf2q.css"//www.iconfont.cn
       ],
       // prefix: "fa6-solid:",
     },

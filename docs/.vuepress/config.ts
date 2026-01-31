@@ -32,7 +32,7 @@ export default defineUserConfig({
     hostname: 'https://note.olinl.com',
 
     /* 文档仓库配置，用于 editLink */
-    docsRepo: 'https://github.com/olinl/note-vuepress',
+    docsRepo: 'https://github.com/olinll/note-vuepress',
     docsDir: 'docs',
     docsBranch: 'main',
  

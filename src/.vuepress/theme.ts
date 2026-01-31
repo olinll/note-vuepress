@@ -11,7 +11,6 @@ export default hopeTheme({
     name: "顾拾柒",
     url: "https://2r.hk",
   },
-
   //站点图标配置
   logo: "https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0",
 
@@ -21,7 +20,8 @@ export default hopeTheme({
 
   // 文档目录
   docsDir: "src",
-
+  // 开启变更日志
+  changelog:true,
   // 导航栏
   navbar,
 

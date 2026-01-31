@@ -1,20 +1,24 @@
 import { hopeTheme } from "vuepress-theme-hope";
-
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
+  //站点配置
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
+  //作者信息
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "顾拾柒",
+    url: "https://2r.hk.com",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  //站点图标配置
+  logo: "https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  // 仓库地址
+  repo: "olinll/note-vuepress",
 
+  // 文档目录
   docsDir: "src",
 
   // 导航栏
@@ -24,7 +28,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "Code licensed under MIT, documentation under CC BY-SA 4.0 ",
   displayFooter: true,
 
   // 加密配置
@@ -88,9 +92,9 @@ export default hopeTheme({
     // },
 
     // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
-    // revealjs: {
-    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-    // },
+    revealjs: {
+      plugins: ["highlight", "math", "search", "notes", "zoom"],
+    },
 
     // 在启用之前安装 chart.js
     // chartjs: true,
@@ -106,12 +110,12 @@ export default hopeTheme({
     // 在启用之前安装 mermaid
     // mermaid: true,
 
-    // playground: {
-    //   presets: ["ts", "vue"],
-    // },
+    playground: {
+      presets: ["ts", "vue"],
+    },
 
     // 在启用之前安装 @vue/repl
-    // vuePlayground: true,
+    vuePlayground: true,
 
     // 在启用之前安装 sandpack-vue3
     // sandpack: true,
@@ -120,12 +124,17 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
-    comment: {
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+    // comment: {
+    //   provider: "Giscus",
+    //   repo: "vuepress-theme-hope/giscus-discussions",
+    //   repoId: "R_kgDOG_Pt2A",
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
+    // },
+
+    //本地搜索插件
+    search: {
+      hotKeys: ["s", "/"],
     },
 
     components: {
@@ -133,7 +142,8 @@ export default hopeTheme({
     },
 
     icon: {
-      prefix: "fa6-solid:",
+      assets: "iconify",
+      // prefix: "fa6-solid:",
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释

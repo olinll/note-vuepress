@@ -6,10 +6,15 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "文档演示",
-  description: "vuepress-theme-hope 的文档演示",
+  title: "Olinl Note",
+  description: "笔记仓库",
 
   theme,
+  markdown: {
+    headers: {
+      level: [1,2,3,4]
+    }
+  },
 
   // 和 PWA 一起启用
   // shouldPrefetch: false,

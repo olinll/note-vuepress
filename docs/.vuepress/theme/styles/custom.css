@@ -1,0 +1,53 @@
+:root {
+  /** 主题颜色 */
+  --vp-c-brand-1: #237ddc;        /* 主蓝 */
+  --vp-c-brand-2: #3f90e6;        /* hover / 次强调 */
+  --vp-c-brand-3: #6fb0f2;        /* 浅强调 */
+  --vp-c-brand-soft: rgba(35, 125, 220, 0.18);
+
+  /** 背景颜色 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f5f8fc;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f0f5fb;
+
+  /** 文本颜色 */
+  --vp-c-text-1: rgba(24, 24, 27, 0.95);
+  --vp-c-text-2: rgba(24, 24, 27, 0.75);
+  --vp-c-text-3: rgba(24, 24, 27, 0.55);
+}
+
+
+/** ================= 深色模式 ================= */
+[data-theme="dark"] {
+  /** 主题颜色 */
+  --vp-c-brand-1: #6fb0f2;        /* 主蓝（暗色下更亮） */
+  --vp-c-brand-2: #3f90e6;
+  --vp-c-brand-3: #237ddc;
+  --vp-c-brand-soft: rgba(111, 176, 242, 0.22);
+
+  /** 背景颜色 */
+  --vp-c-bg: #0f172a;             /* 深蓝黑 */
+  --vp-c-bg-alt: #0b1220;
+  --vp-c-bg-elv: #111c33;
+  --vp-c-bg-soft: #111c33;
+
+  /** 文本颜色 */
+  --vp-c-text-1: rgba(235, 242, 255, 0.92);
+  --vp-c-text-2: rgba(235, 242, 255, 0.68);
+  --vp-c-text-3: rgba(235, 242, 255, 0.45);
+}
+
+
+/* 自定义Name渐变颜色 */
+.name.clip{
+  background: linear-gradient(90deg, #8baaf0 0%, #a2d9f5 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+.vp-image.light.logo{
+  border-radius: 50%;
+}

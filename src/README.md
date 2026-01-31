@@ -1,6 +1,6 @@
 ---
 home: true
-icon: line-md:home
+icon: iconfont icon-home
 title: 首页
 heroImage: https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0
 bgImageStyle:

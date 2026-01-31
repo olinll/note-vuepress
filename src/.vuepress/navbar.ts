@@ -5,7 +5,7 @@ export default navbar([
   "/",
   {
     text: "笔记",
-    icon: "line-md:file-document",
+    icon: "iconfont icon-Note-1",
     prefix: "/guide/",
     link: "/guide.html",
   },

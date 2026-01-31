@@ -1,6 +1,6 @@
 ---
 title: 目录
-icon: line-md:list-3-filled
+icon: iconfont icon-mulu
 order: 1
 ---
 <!-- 自动生成目录 -->

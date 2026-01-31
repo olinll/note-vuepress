@@ -15,6 +15,9 @@ export default hopeTheme({
   //站点图标配置
   logo: "https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0",
 
+  // 图标资源配置
+  iconAssets: "https://unpkg.com/iconify-icon@2",
+
   // 仓库地址
   repo: "olinll/note-vuepress",
 

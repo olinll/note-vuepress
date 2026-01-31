@@ -10,11 +10,7 @@ export default defineUserConfig({
   description: "笔记仓库",
 
   theme,
-  markdown: {
-    headers: {
-      level: [1,2,3,4]
-    }
-  },
+  
 
   // 和 PWA 一起启用
   // shouldPrefetch: false,

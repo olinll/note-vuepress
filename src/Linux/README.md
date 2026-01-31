@@ -1,11 +1,11 @@
 ---
-title: Docker
+title: Linux
 dir:
-  order: 1
+  order: 2
 index: false
-icon: iconfont icon-docker
+icon: iconfont icon-linux
 ---
 <!-- 自动生成目录 -->
 <div class="catalog-display-container">
-  <Catalog base='/docker/' />
+  <Catalog base='/Linux/' />
 </div>

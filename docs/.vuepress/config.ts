@@ -35,23 +35,28 @@ export default defineUserConfig({
     docsRepo: 'https://github.com/olinl/note-vuepress',
     docsDir: 'docs',
     docsBranch: 'main',
-
+ 
     /* 页内信息 */
     // editLink: true,
     // lastUpdated: true,
     // contributors: true,
+     changelog: true,
     contributors: { 
-      mode: 'inline',
+      mode: 'block',
        info:[
         {
           username: '顾拾柒',
-          email: 'olinl@foxmail.com',
+          email: '96218030+olinll@users.noreply.github.com',
           avatar: 'https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0',
           url: 'https://2r.hk',
         },
        ],
      },
-   
+    //dev环境启用
+  //  plugins: {
+  //     // 如果您在此处直接声明为 true，则表示开发环境和生产环境都启用该功能
+  //     git: process.env.NODE_ENV === 'production'
+  //   },
 
     /**
      * 编译缓存，加快编译速度

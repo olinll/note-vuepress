@@ -31,7 +31,8 @@ export default hopeTheme({
   footer: "Code licensed under MIT, documentation under CC BY-SA 4.0 ",
   displayFooter: true,
 
-   darkmode: "auto",
+  //自动切换深色模式（默认）
+   darkmode: "switch",
 
   // 加密配置
   encrypt: {

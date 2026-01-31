@@ -40,7 +40,18 @@ export default defineUserConfig({
     // editLink: true,
     // lastUpdated: true,
     // contributors: true,
-    // changelog: false,
+    contributors: { 
+      mode: 'inline',
+       info:[
+        {
+          username: '顾拾柒',
+          email: 'olinl@foxmail.com',
+          avatar: 'https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0',
+          url: 'https://2r.hk',
+        },
+       ],
+     },
+   
 
     /**
      * 编译缓存，加快编译速度

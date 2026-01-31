@@ -9,7 +9,7 @@ export default hopeTheme({
   //作者信息
   author: {
     name: "顾拾柒",
-    url: "https://2r.hk.com",
+    url: "https://2r.hk",
   },
 
   //站点图标配置
@@ -49,7 +49,11 @@ export default hopeTheme({
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-
+  
+  
+  toc:{
+    levels: [1,2]
+  },
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   // hotReload: true,
 
@@ -87,9 +91,12 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
 
+    
     //语法高亮
     highlighter:{
       type:"shiki",
+      //代码块折叠
+      collapsedLines:true,
     },
     // 取消注释它们如果你需要 TeX 支持
     // math: {
@@ -152,7 +159,7 @@ export default hopeTheme({
     icon: {
       // assets: "iconify",
       assets: [
-        "//at.alicdn.com/t/c/font_5120858_qm8na0gsf2q.css"//www.iconfont.cn
+        "//at.alicdn.com/t/c/font_5120858_btwbhcbbka7.css"//https://www.iconfont.cn
       ],
       // prefix: "fa6-solid:",
     },

@@ -71,7 +71,7 @@ const note: ThemeCollectionItem = defineCollection({
         icon: "line-md:list",
         prefix: "centos",
         link: "centos/",
-        collapsed: false,
+        collapsed: true,
         items: [
          "installation",// 安装 CentOS
          "optimize",// 优化 CentOS
@@ -93,7 +93,7 @@ const note: ThemeCollectionItem = defineCollection({
         icon: "line-md:list",
         prefix: "alpine",
         link: "alpine/",
-        collapsed: false,
+        collapsed: true,
         items: [
          "install",// 安装 Alpine
          "config",// 配置 Alpine
@@ -107,7 +107,7 @@ const note: ThemeCollectionItem = defineCollection({
         icon: "line-md:list",
         prefix: "opsdev",
         link: "opsdev/",
-        collapsed: false,
+        collapsed: true,
         items: [
          "lvm-disk",// LVM 磁盘工具
           "jar-sh",// 运行 Jar 包
@@ -123,14 +123,14 @@ const note: ThemeCollectionItem = defineCollection({
     icon: "line-md:folder-multiple-filled",
     prefix: "homelab",
     link: "homelab/",
-    collapsed: false,
+    collapsed: true,
     items: 'auto'
    },
    {
     text: "其他",
     icon: "line-md:folder-multiple-filled",
     prefix: "other",
-    collapsed: false,
+    collapsed: true,
     items: 'auto'
    }
 ],

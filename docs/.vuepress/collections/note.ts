@@ -15,7 +15,7 @@ const note: ThemeCollectionItem = defineCollection({
         text: "Docker",
         icon: "line-md:list",
         prefix: "docker",
-        collapsed: false,
+        collapsed: true,
         link: "docker/",
         items: [
           "installation",// 安装 Docker
@@ -29,7 +29,7 @@ const note: ThemeCollectionItem = defineCollection({
         text: "Docker Compose",
         icon: "line-md:list",
         prefix: "compose",
-        collapsed: false,
+        collapsed: true,
         link: "compose/",
         items: [
           "install",// 安装 Compose
@@ -40,7 +40,7 @@ const note: ThemeCollectionItem = defineCollection({
         text: "Kubernetes",
         icon: "line-md:list",
         prefix: "kubernetes",
-        collapsed: false,
+        collapsed: true,
         link: "kubernetes/",
         items: [
           "kubesphere-install",// 安装 Kubernetes
@@ -52,7 +52,7 @@ const note: ThemeCollectionItem = defineCollection({
         text: "项目推荐",
         icon: "line-md:list",
         prefix: "star",
-        collapsed: false,
+        collapsed: true,
         link: "star/",
         items: [
           "memos",// Memos 笔记

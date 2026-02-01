@@ -17,19 +17,9 @@ const note: ThemeCollectionItem = defineCollection({
         icon: "logos:docker-icon",
         prefix: "docker",
         items: [
-          "111",
           "docker-install"
         ]
       }
-    ]
-  },
-  {
-    text: "示例",
-    prefix: "demo",
-    items: [
-      "bar",
-      "foo",
-      "markdown"
     ]
   },
   {

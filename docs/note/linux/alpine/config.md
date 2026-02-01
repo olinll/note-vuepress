@@ -5,7 +5,7 @@ permalink: /note/linux/alpine/config/
 ---
 在安装完 Alpine 系统后，需要进行一些配置，才能正常使用。
 
-# 设置DNS
+## 设置DNS
 
 一般情况下不需要，云厂商会帮你配置好  
 
@@ -15,7 +15,7 @@ DNS Domain name? (e.g. 'bar.com') nameserver
 DNS nameserver(s)? [223.5.5.5] 1.1.1.1 8.8.8.8
 ```
 
-# 换源并更新
+## 换源并更新
 
 ```bash
 # 配置社区阿里云源
@@ -32,7 +32,7 @@ apk update
 apk upgrade
 ```
 
-# 配置 IP 信息
+## 配置 IP 信息
 
 在这里可以将dhcp改为静态配置
 
@@ -56,13 +56,13 @@ nameserver 8.8.8.8
 ifdown eth0 && ifup eth0
 ```
 
-# 安装基本软件包
+## 安装基本软件包
 
 ```bash
 apk add --no-cache vim openssh util-linux bash bash-doc  bash-completion curl net-tools unzip zip jq openssl tar iproute2 lsblk htop
 ```
 
-# 校时
+## 校时
 
 ```bash
 # 设置时区

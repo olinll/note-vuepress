@@ -7,7 +7,7 @@ permalink: /note/container/docker/uninstall/
 > [!CAUTION]
 > 在卸载前，需确认是否保留容器、镜像、卷或配置文件
 
-# Ubuntu
+## Ubuntu
 
 **停止 Docker 相关服务**
 
@@ -45,7 +45,7 @@ rm -rf ~/.docker
 sudo rm -rf /var/log/docker /var/log/containerd
 ```
 
-# CentOS / RHEL
+## CentOS / RHEL
 
 **停止服务与进程**
 

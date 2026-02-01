@@ -11,7 +11,7 @@ redis版本：6.2.6
 
 通过yum或者rpm包安装，下载文件本地编译，然后配置system文件，使用systemctl进行管理
 
-# 下载解压
+## 下载解压
 
 ```bash
 # 下载redis
@@ -24,7 +24,7 @@ tar xzf redis-6.2.6.tar.gz
 mv redis-6.2.6 /opt/redis
 ```
 
-# 编译安装
+## 编译安装
 
 ```bash
 # 安装编译所需工具
@@ -41,7 +41,7 @@ make install PREFIX=/opt/redis
 ./bin/redis-server redis.conf
 ```
 
-# 配置服务
+## 配置服务
 
 **设置redis密码**
 

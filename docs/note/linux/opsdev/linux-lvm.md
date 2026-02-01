@@ -10,7 +10,7 @@ permalink: /note/linux/opsdev/linux-lvm/
 
 >ubuntu也可以使用此文档
 
-# 安装LVM
+## 安装LVM
 
 ```shell
 # centos
@@ -20,7 +20,7 @@ yum  install -y lvm2
 apt install -y lvm2
 ```
 
-# 命令大全
+## 命令大全
 
 这里就是常用的创建分区所有使用的命令了，注意部分命令例如`lsblk` 只会提及一次，如想查看完整操作请看下一小节。
 
@@ -125,9 +125,9 @@ vgdisplay
 
 ```
 
-# 真机实践
+## 真机实践
 
-## 1、查看当前磁盘
+### 1、查看当前磁盘
 
 ~~~
 [root@fsddxtclgj9vm900419 ~]# df -Th                                                     
@@ -143,7 +143,7 @@ tmpfs                   tmpfs     1.6G   36K  1.6G   1% /run/user/0
 tmpfs                   tmpfs     1.6G   40K  1.6G   1% /run/user/1001
 ~~~
 
-## 2、查看块分区
+### 2、查看块分区
 
 ~~~
 [root@fsddxtclgj9vm900419 ~]# lsblk 
@@ -159,7 +159,7 @@ vdb             252:16   0  974G  0 disk
 
 可以看到 /dev/vdb 为新增的磁盘
 
-## 3、格式化磁盘
+### 3、格式化磁盘
 
 ~~~shell
 [root@fsddxtclgj9vm900419 ~]# parted /dev/vdb
@@ -216,13 +216,13 @@ Information: You may need to update /etc/fstab
 
 以上 (parted) 开头的代表输入的命令，具体功能可以通过 help 查看
 
-## 4、重读分区表
+### 4、重读分区表
 
 ```bash
 partprobe /dev/vdb
 ```
 
-## 5、重新查看块分区
+### 5、重新查看块分区
 
 ```dart
 [root@fsddxtclgj9vm900419 ~]# lsblk 
@@ -238,7 +238,7 @@ vdb             252:16   0   974G  0 disk
 
 可以看到vdb下多了vdb1，这个用来创建pv
 
-## 6、创建PV
+### 6、创建PV
 
 ```csharp
 [root@fsddxtclgj9vm900419 ~]# pvcreate -v /dev/vdb1
@@ -255,9 +255,9 @@ vdb             252:16   0   974G  0 disk
 
 PV创建好之后，到这一步可以选择扩展或者新建挂载点，**扩容的前提条件是扩容挂载点的磁盘格式是LVM格式**，这里先演示新建挂载点然后删除挂载点并扩容
 
-## 7、新增LVM挂载
+### 7、新增LVM挂载
 
-### 查看PV
+#### 查看PV
 
 ```sql
 [root@fsddxtclgj9vm900419 ~]# pvdisplay
@@ -287,14 +287,14 @@ PV创建好之后，到这一步可以选择扩展或者新建挂载点，**扩�
 
 注意看 VG Name，前面的是系统安装时选择LVM格式的，后面的还没有创建，所以 VG Name 为空
 
-### 新建VG
+#### 新建VG
 
 ```csharp
 [root@fsddxtclgj9vm900419 ~]# vgcreate -s 4M vg01 /dev/vdb1
   Volume group "vg01" successfully created
 ```
 
-### 查看VG
+#### 查看VG
 
 ```sql
 [root@fsddxtclgj9vm900419 ~]# vgdisplay
@@ -343,14 +343,14 @@ PV创建好之后，到这一步可以选择扩展或者新建挂载点，**扩�
 
 可以看到 vg01 为新建的VG
 
-### 新建LV
+#### 新建LV
 
 ```csharp
 [root@fsddxtclgj9vm900419 ~]# lvcreate  -l 100%FREE -n lv01 vg01
   Logical volume "lv01" created
 ```
 
-### 格式化LV
+#### 格式化LV
 
 格式化文件系统类型有xfs，ext4，这里测试使用ext4格式，**默认centos7下使用xfs格式，centos6为ext4格式**
 
@@ -380,14 +380,14 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
 
-### 新建挂载点并挂载
+#### 新建挂载点并挂载
 
 ```bash
 mkdir /app
 mount /dev/vg01/lv01 /app
 ```
 
-### 查看新增挂载后的块分区
+#### 查看新增挂载后的块分区
 
 ```dart
 [root@fsddxtclgj9vm900419 ~]# lsblk 
@@ -404,7 +404,7 @@ vdb             252:16   0   974G  0 disk
 
 可以看到新增磁盘以LVM格式挂载在 /app 下
 
-### 永久写入挂载点
+#### 永久写入挂载点
 
 ~~~shell
 blkid
@@ -444,16 +444,16 @@ UUID=37bbfff9-76da-4515-a9e5-b8820ea523e5 /app ext4 defaults 0 0
 
 ~~~
 
-## 8、删除LVM挂载点
+### 8、删除LVM挂载点
 
-### 删除挂载点
+#### 删除挂载点
 
 ```bash
 [root@fsddxtclgj9vm900419 ~]# umount -v /dev/vg01/lv01
 umount: /app (/dev/mapper/vg01-lv01) unmounted
 ```
 
-### 查看块设备
+#### 查看块设备
 
 ```dart
 [root@fsddxtclgj9vm900419 ~]# lsblk 
@@ -474,7 +474,7 @@ vdb             252:16   0   974G  0 disk
 rm -rf /app
 ```
 
-### 删除LV
+#### 删除LV
 
 参数为 LV Path
 
@@ -484,7 +484,7 @@ Do you really want to remove active logical volume vg01/lv01? [y/n]: y
   Logical volume "lv01" successfully removed
 ```
 
-### 删除VG
+#### 删除VG
 
 参数为 VG Name
 
@@ -493,7 +493,7 @@ Do you really want to remove active logical volume vg01/lv01? [y/n]: y
   Volume group "vg01" successfully removed
 ```
 
-### 扩容VG
+#### 扩容VG
 
 参数为 VG Name 和 PV Name
 
@@ -504,7 +504,7 @@ Do you really want to remove active logical volume vg01/lv01? [y/n]: y
 
 此时 PV /dev/vdb1 全部扩展到 VG centos下
 
-### 查看LV
+#### 查看LV
 
 ```bash
 [root@fsddxtclgj9vm900419 ~]# lvdisplay 
@@ -545,7 +545,7 @@ Do you really want to remove active logical volume vg01/lv01? [y/n]: y
 
 通过查看，系统安装时选择的磁盘格式是LVM并且有两个分区，接下来扩展根分区
 
-### 扩展LV分区
+#### 扩展LV分区
 
 参数为 LV Path
 
@@ -561,7 +561,7 @@ Do you really want to remove active logical volume vg01/lv01? [y/n]: y
 lvreduce -L 1017.2G  /dev/centos/root
 ```
 
-### 加载扩容到系统
+#### 加载扩容到系统
 
 此时查看系统可以看到已经扩容，但没有加载到文件系统
 

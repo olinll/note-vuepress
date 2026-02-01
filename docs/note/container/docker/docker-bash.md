@@ -2,39 +2,39 @@
 title: 操作命令
 createTime: 2026/02/01 13:41:44
 permalink: /note/container/docker/docker-bash/
-outline: [1]
+outline: [2]
 ---
 
 ---
 
 
-# systemctl服务命令
+## systemctl服务命令
 
-## 启动docker
+### 启动docker
 
 ```bash
 systemctl start docker
 ```
 
-## 关闭docker
+### 关闭docker
 
 ```bash
 systemctl stop docker
 ```
 
-## 查看docker状态
+### 查看docker状态
 
 ```bash
 systemctl status docker
 ```
 
-## 开机自启动
+### 开机自启动
 
 ```bash
 systemctl enable docker
 ```
 
-# Docker run
+## Docker run
 
 docker run 命令用于创建并启动一个新的容器。
 
@@ -55,7 +55,7 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 -  **`--restart`**: 容器的重启策略（如 `no`、`on-failure`、`always`、`unless-stopped`）。
 -  **`-u`**: 指定用户。
 
-# Docker start / stop / restart
+## Docker start / stop / restart
 
 **docker start** 命令用于启动一个或多个已经创建的容器。
 
@@ -82,7 +82,7 @@ docker restart [OPTIONS] CONTAINER [CONTAINER...]
 
  **-t, --time**: 停止容器之前等待的秒数，默认是 10 秒。
 
-# Docker exec
+## Docker exec
 
 `docker exec` 命令用于在运行中的容器内执行一个新的命令。这对于调试、运行附加的进程或在容器内部进行管理操作非常有用。
 
@@ -90,7 +90,7 @@ docker restart [OPTIONS] CONTAINER [CONTAINER...]
 docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 ```
 
-## 常用参数
+### 常用参数
 
 -  **`-d, --detach`**: 在后台运行命令。
 -  **`--detach-keys`**: 覆盖分离容器的键序列。
@@ -112,7 +112,7 @@ docker exec -it my_container /bin/bash
 ```
 
 
-# Docker ps
+## Docker ps
 
 docker ps 命令用于列出 Docker 容器。
 
@@ -133,7 +133,7 @@ OPTIONS说明：
 -  **`--filter, -f`**: 根据条件过滤显示的容器。
 -  **`--format`**: 格式化输出。
 
-## 实例
+### 实例
 
 **1、列出所有在运行的容器信息**
 
@@ -174,7 +174,7 @@ CONTAINER ID   IMAGE          COMMAND                ...  PORTS                 
 **NAMES:**  自动分配的容器名称。
 
 
-# Docker logs
+## Docker logs
 
 `docker logs` 命令用于获取和查看容器的日志输出。
 
@@ -193,7 +193,7 @@ docker logs [OPTIONS] CONTAINER
 -  **`--details`**: 显示提供给日志的额外详细信息。
 -  **`--until`**: 显示直到指定时间的日志。
 
-## 实例
+### 实例
 
 **显示容器日志**
 
@@ -275,7 +275,7 @@ docker logs --until="2023-07-22T16:00:00" my_container
 
 
 
-# Docker images
+## Docker images
 
 `docker images` 命令用于列出本地的 Docker 镜像。
 
@@ -332,7 +332,7 @@ docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}"
 
 
 
-# Docker pull
+## Docker pull
 
 ```bash
 docker pull  [OPTIONS] NAME[:TAG|@DIGEST]
@@ -354,7 +354,7 @@ docker pull  [OPTIONS] NAME[:TAG|@DIGEST]
 >
 >  ***-q, --quiet***: 抑制详细输出。
 
-## 错误处理和注意事项
+### 错误处理和注意事项
 
 在使用 `docker pull`时，可能会遇到一些常见问题：
 
@@ -365,7 +365,7 @@ docker pull  [OPTIONS] NAME[:TAG|@DIGEST]
 docker login myregistry.com
 ```
 
-# Docker tag
+## Docker tag
 
 `docker tag` 命令用于创建本地镜像的别名（tag），通过为镜像打标签，可以使用更容易记忆的名字或版本号来标识和管理镜像。
 
@@ -378,7 +378,7 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 > **`TARGET_IMAGE[:TAG]`** : 目标镜像名称和标签，标签默认为 `latest`。
 
 
-# Docker push
+## Docker push
 
 ```bash
 docker push [OPTIONS] NAME[:TAG]
@@ -392,7 +392,7 @@ OPTIONS 说明：
 
 -  **--disable-content-trust :** 忽略镜像的校验,默认开启
 
-# Docker save
+## Docker save
 
 `docker save` 命令用于将一个或多个 Docker 镜像保存到一个 tar 归档文件中，以便在其他环境中分发或备份。
 
@@ -407,7 +407,7 @@ OPTIONS 说明：
 -  **`-o, --output`**: 指定输出文件的路径。
 
 
-## 示例
+### 示例
 
 1、保存单个镜像到文件
 
@@ -416,7 +416,7 @@ OPTIONS 说明：
 docker save -o myimage.tar myimage:latest
 ```
 
-# Docker load
+## Docker load
 
 `docker load` 命令用于从由 `docker save` 命令生成的 tar 文件中加载 Docker 镜像。它可以将存档中的镜像和所有层加载到 Docker 中，使其可以在新环境中使用。
 
@@ -429,7 +429,7 @@ OPTIONS 说明：
 -  **`-i, --input`**: 指定输入文件的路径。
 -  **`-q, --quiet`**: 安静模式，减少输出信息。
 
-## 示例
+### 示例
 
 1、从文件加载镜像
 

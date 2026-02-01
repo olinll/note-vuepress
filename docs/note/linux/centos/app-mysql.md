@@ -9,7 +9,7 @@ tags:
 
 采用官网rpm包安装，版本为5.7的最后一个版本
 
-# 下载解压
+## 下载解压
 
 获取下载链接，可以使用本站 cdn 地址
 
@@ -46,7 +46,7 @@ wget https://cdn.olinl.com/centos/mysql-5.7.44-1.el7.x86_64.rpm-bundle-lite.tar 
 tar -xvf mysql-8.0.27-1.el7.x86_64.rpm*.tar
 ```
 
-# 安装并配置
+## 安装并配置
 
 ```bash
 # 安装必要软件包

@@ -11,7 +11,7 @@ tags:
 > 
 > 这里只简单说明 Linux 下的安装方式，如果是下载的最新版本，它对系统内存和 jdk 版本是有要求的，要求内存大于`4G`，jdk 最低是`1.8`版本。
 
-# 安装
+## 安装
 
 Nexus官网：[https://www.sonatype.com/download-oss-sonatype](https://www.sonatype.com/download-oss-sonatype)
 

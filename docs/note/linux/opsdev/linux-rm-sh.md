@@ -8,9 +8,9 @@ permalink: /note/linux/opsdev/linux-rm-sh/
 
 同时，需要确保清理日志的周期，不能清除近期的日志，以免造成无法追溯日志的情况。
 
-# 正文
+## 正文
 
-## 脚本内容
+### 脚本内容
 
 下面是一个Shell脚本
 
@@ -33,7 +33,7 @@ find /usr/local/huanfa-log/* -mtime +7 -path "*.log"  -exec rm -rf {} +  2>&1
 echo "del file end"
 ```
 
-## 定期运行脚本
+### 定期运行脚本
 
 使用crontab
 

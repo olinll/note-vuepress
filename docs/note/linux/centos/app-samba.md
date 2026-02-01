@@ -9,7 +9,7 @@ tags:
 
 > Samba 是一个开源的软件，它实现了 SMB/CIFS 协议，允许在不同操作系统之间共享文件和打印机。
 
-# 安装
+## 安装
 
 安装前请确保SELinux已关闭，
 
@@ -30,7 +30,7 @@ systemctl disable firewalld.service
 yum install -y samba samba-client
 ```
 
-# 配置服务
+## 配置服务
 
 ```bash
 # 编辑配置文件，共享/var/www/html/目录

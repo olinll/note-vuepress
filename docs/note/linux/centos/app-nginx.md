@@ -9,7 +9,7 @@ tags:
 
 使用yum安装nginx
 
-# 安装
+## 安装
 
 配置nginx源
 
@@ -27,9 +27,11 @@ systemctl start nginx
 systemctl enable nginx
 ```
 
-# 生产配置
+## 生产配置
 
 通常我们不会直接修改nginx主配置文件，会采用引入的方式去配置
+
+### 多站点配置
 
 可以一个端口配置多个站点，nginx允许这样操作
 
@@ -51,7 +53,7 @@ server {
 }
 ```
 
-**nginx主配置文件常用配置**
+### 常用配置
 
 ```sql title="nginx.conf"
 # 处理HTTP请求和响应，适用于Web应用和网站
@@ -74,7 +76,7 @@ stream{
 }
 ```
 
-**常规vue反向代理配置**
+### Vue 反向代理配置
 
 ```sql title="nginx.conf"
 server {
@@ -125,7 +127,7 @@ server {
 }
 ```
 
-**SSL配置**
+### SSL配置
 
 ```sql title="nginx.conf"
 server {
@@ -159,7 +161,9 @@ server {
 }
 ```
 
-**使用nginx代理服务端口，例如MySQL**
+### 反向代理服务端口
+
+使用nginx代理服务端口，例如MySQL
 
 ```sql title="stream_nginx.conf"
 # 这个要写在stream块里面
@@ -176,7 +180,7 @@ server {
 }
 ```
 
-**例外，minio的特殊配置**
+### 例外，minio的特殊配置
 
 如果出现页面上显示 `“ The request signature we calculated does not match the signature you provided. Check your key and signing method.”` 可以使用此配置文件解决
 

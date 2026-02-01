@@ -6,7 +6,7 @@ permalink: /note/container/docker/prod-config/
 
 docker的默认存储路径都在 `/var/lib/docker/` 下，生产环境的系统磁盘有限，所以我们要转移存储目录，并且做一些配置。
 
-# 更换工作目录
+## 更换工作目录
 
 由于docker默认工作目录在 `/var/lib/docker/` 下，生产环境的系统磁盘有限，所以我们需要将默认目录修改到自定义的目录下，本文修改到 `/opt/docker/` 目录下
 
@@ -50,7 +50,7 @@ sudo docker info
 rm -rf /var/lib/docker
 ```
 
-# 限制日志数量
+## 限制日志数量
 
 **修改配置文件（被动）**
 
@@ -109,7 +109,7 @@ done
 echo "日志清理完成。"
 ```
 
-# 其他配置
+## 其他配置
 
 ```sql
 # 指定私服仓库地址

@@ -13,11 +13,11 @@ tags:
 :::
 
 
-# 必做优化
+## 必做优化
 
 在安装完成后，需要进行一些必要的优化
 
-## 修改 IP 地址
+### 修改 IP 地址
 
 可以先ping一下外网是否可以访问
 
@@ -111,7 +111,7 @@ service network restart
 
 然后就可以正常联网了。
 
-## 更换yum源
+### 更换yum源
 
 ::: tip
 
@@ -145,7 +145,7 @@ yum update -y
 
 ```
 
-## 安装必要的软件包
+### 安装必要的软件包
 
 ```bash
 
@@ -168,7 +168,7 @@ yum -y install wget vim net-tools telnet lsof tree htop zip unzip iperf3
 
 :::
 
-## 硬盘操作
+### 硬盘操作
 
 此操作可以借助lvm2工具，详细操作见另一篇文章：
 
@@ -178,7 +178,7 @@ title: LVM2
 link: /
 ```
 
-## 配置 SELinux
+### 配置 SELinux
 
 SELinux 是 CentOS 7 的安全模块，它可以提高系统的安全性。但是，如果不正确配置，它可能会导致一些问题。以下是一些常见的 SELinux 配置
 
@@ -194,7 +194,7 @@ SELINUX=disabled
 
 ```
 
-## 防火墙操作
+### 防火墙操作
 
 通常情况下我们使用的是 vpc，云厂商会自带防火墙服务，我们可以将防火墙直接关闭。
 
@@ -258,7 +258,7 @@ firewall-cmd --list-services
 firewall-cmd --zone=public --list-ports
 ```
 
-## 一键运行脚本
+### 一键运行脚本
 
 **包含更新阿里yum源，安装软件包，关闭防火墙**
 
@@ -276,9 +276,9 @@ systemctl disable firewalld.service
 ```
 
 
-# 可选操作
+## 可选操作
 
-## 修改主机名
+### 修改主机名
 
 ```bash
 # 查看主机名
@@ -287,7 +287,7 @@ hostname
 hostnamectl set-hostname 主机名
 ```
 
-## 配置免密登录
+### 配置免密登录
 
 ```bash
 # 在A客户端上生成公钥和私钥
@@ -299,7 +299,7 @@ ssh-keygen -t rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub 'root@要拷贝到的机器ip'
 ```
 
-## 配置hosts
+### 配置hosts
 
 服务器多的时候可以配置hosts，直接通过关键字访问，避免使用ip访问，以免更换ip时还要修改配置
 
@@ -319,7 +319,7 @@ sudo tee -a /etc/hosts << EOF
 EOF
 ```
 
-## 使用scp传输文件
+### 使用scp传输文件
 
 **从服务器上下载文件**
 
@@ -357,7 +357,7 @@ scp -r root@192.168.0.101:/data  /home/
 scp -r /home root@192.168.0.101:/data/
 ```
 
-## 安装rpm包
+### 安装rpm包
 
 ```bash
 # 批量安装rpm
@@ -374,7 +374,7 @@ rpm -e firefox
 rpm -ivh *.rpm --nodeps --force
 ```
 
-## 赋权
+### 赋权
 
 ```bash
 # 赋予读写权限
@@ -385,7 +385,7 @@ chmod -R 777 文件或目录
 chmod +x 文件
 ```
 
-## 查看端口占用
+### 查看端口占用
 
 ```bash
 yum -y install lsof

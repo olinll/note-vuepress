@@ -6,13 +6,13 @@ permalink: /note/container/kubernetes/kubernetes-upd-dir/
 
 > 参考网址：[kubelet修改工作目录 | 好好学习的郝](https://www.voidking.com/dev-kubelet-root-dir/)
 
-# 需求描述
+## 需求描述
 
 kubelet的默认工作目录（存储目录）是`/var/lib/kubelet`，会存放volume文件（包括emptyDir volume)、plugin文件等，默认挂载在系统盘。
 而系统盘一般都不会太大，因此最好把kubelet工作目录更改到数据盘。
 本文中，我们会把docker的工作目录从`/var/lib/kubelet`改到`/app/kubelet`，其中`/app`目录挂载了数据盘。
 
-# 修改配置
+## 修改配置
 
 “建议先修改node节点的，再修改主节点的”
 

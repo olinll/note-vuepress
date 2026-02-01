@@ -9,7 +9,7 @@ permalink: /note/linux/alpine/install/
 
 **我们的目标非常明确：在有限的资源内，榨干每一分性能。** 这时，一个专为资源受限环境而生的系统进入了视野——**Alpine Linux**。它基础运行内存仅需 **5-10 MB**，安装后硬盘占用不到 **100 MB**，恰恰是这种超轻量级服务器的“天作之合”。选择 Alpine，不是追逐潮流，而是在极致性价比方案下的**必然技术选择**。
 
-# 开始安装
+## 开始安装
 
 Alpine 60M镜像链接
 
@@ -17,7 +17,7 @@ Alpine 60M镜像链接
 https://dl-cdn.alpinelinux.org/alpine/v3.23/releases/x86_64/alpine-virt-3.23.2-x86_64.iso
 ```
 
-## 阿里云添加自定义镜像
+### 阿里云添加自定义镜像
 
 因为阿里云不提供Alpine的镜像，我们要使用自定义镜像，下面跟我一起配置吧
 
@@ -46,7 +46,7 @@ https://dl-cdn.alpinelinux.org/alpine/v3.23/releases/x86_64/alpine-virt-3.23.2-x
 
 ![](./img/alpine-install-481683.png)
 
-## 安装Alpine系统
+### 安装Alpine系统
 > 如果你使用阿里云自定义镜像进行安装了，需要使用vnc远程链接进行安装系统，别家的厂商也是一样。
 > 
 > 进入 云服务器管理控制台 选择你刚买的ECS，接下来点击 远程连接 ，展开更多，选择 通过VNC远程连接

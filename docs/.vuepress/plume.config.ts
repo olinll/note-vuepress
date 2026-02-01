@@ -45,7 +45,7 @@ export default defineThemeConfig({
   ],
   navbarSocialInclude: ['github', 'qq'], // 允许显示在导航栏的 social 社交链接
   aside: true, // 页内侧边栏， 默认显示在右侧
-  outline: [1, 2], // 页内大纲， 默认显示 h2, h3
+  outline: [2, 3], // 页内大纲， 默认显示 h2, h3
 
   /**
    * 文章版权信息

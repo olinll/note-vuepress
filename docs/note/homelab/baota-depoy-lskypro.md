@@ -16,7 +16,7 @@ permalink: /note/homelab/baota-depoy-lskypro/
 
 ---
 
-# 安装环境
+## 安装环境
 
 - Nginx 1.21+
 - Mysql 5.7+
@@ -26,9 +26,9 @@ permalink: /note/homelab/baota-depoy-lskypro/
 
 需要在宝塔面板安装相应的组件，
 
-# 配置php
+## 配置php
 
-## 安装扩展
+### 安装扩展
 安装php的时候已经安装过一部分扩展，这里只需要补全所需的扩展即可
 
 > 需要安装的扩展插件
@@ -46,7 +46,7 @@ permalink: /note/homelab/baota-depoy-lskypro/
 
 ![](./img/baota-depoy-lskypro-140118.png)
 
-## 禁用函数
+### 禁用函数
 
 PHP设置→禁用函数
 
@@ -65,15 +65,15 @@ PHP设置→禁用函数
 
 ![](./img/baota-depoy-lskypro-821889.png)
 
-# MySQL、Redis
+## MySQL、Redis
 
 添加一个**lsky**的数据库
 
-# 添加站点
+## 添加站点
 
 添加站点，域名需要和后台授权的域名一致
 
-## 设置伪静态
+### 设置伪静态
 
 ```sql
 location / {
@@ -83,13 +83,13 @@ location / {
 
 随后上传文件到网站根目录并解压
 
-## 设置网站目录
+### 设置网站目录
 
 运行目录设置为：/public
 
 ![](./img/baota-depoy-lskypro-377536.png)
 
-# 配置.env文件
+## 配置.env文件
 
 找到网站根目录下的.env文件
 
@@ -109,11 +109,11 @@ location / {
 - REDIS_PORT=Redis 连接端口(默认为 6379)
 
 
-# 命令行配置 <Badge type="danger" text="重要" />
+## 命令行配置 <Badge type="danger" text="重要" />
 
 兰空图床企业版需要通过 php cli 的方式启动队列、计划任务处理进程，此操作需要登录 SSH。
 
-## 配置队列处理进程
+### 配置队列处理进程
 
 打开 进程守护管理器进行配置
 
@@ -154,7 +154,7 @@ extension=ixed.8.2.lin
 
 
 
-## 配置计划任务处理进程
+### 配置计划任务处理进程
 
 计划任务需要用到 linux 中的 Crontab
 
@@ -167,9 +167,9 @@ cd /www/wwwroot/img.olinl.com && /www/server/php/82/bin/php artisan schedule:run
 
 
 
-# 问题
+## 问题
 
-## 问题1
+### 问题1
 
 如果出现这样的问题：Unsupported cipher or incorrect key length. Supported ciphers are: aes-128-cbc, aes-256-cbc, aes-128-gcm, aes-256-gcm. 
 
@@ -181,7 +181,7 @@ cd /www/wwwroot/img.olinl.com && /www/server/php/82/bin/php artisan schedule:run
 /www/server/php/82/bin/php artisan key:generate
 ```
 
-## 问题2
+### 问题2
 
 如果出现了这样的问题：file_exists(): open_basedir restriction in effect. File(/.dockerenv) is not within the allowed path(s): (/www/wwwroot/img.olinl.com/:/tmp/) 
 
@@ -189,7 +189,7 @@ cd /www/wwwroot/img.olinl.com && /www/server/php/82/bin/php artisan schedule:run
 
 ![](./img/baota-depoy-lskypro-071241.png)
 
-# 配置AWS S3 （Minio存储）
+## 配置AWS S3 （Minio存储）
 
 访问 URL：<minio绑定的域名+/+存储桶名称>
 

@@ -6,7 +6,7 @@ permalink: /note/linux/alpine/bash-apk/
 
 这里记录了 Alpine 系统常用的命令
 
-# APK命令
+## APK命令
 
 ```bash
 apk update  # 更新最新镜像源列表
@@ -33,7 +33,7 @@ apk del openssh      # 删除一个软件
 apk del nginx mysql  # 删除多个软件
 ```
 
-# rc服务命令
+## rc服务命令
 
 ```bash
 rc-update    # 主要用于不同运行级增加或者删除服务。

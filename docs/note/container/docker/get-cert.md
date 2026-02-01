@@ -6,7 +6,7 @@ permalink: /note/container/docker/get-cert/
 
 在很多时候，我们会把docker私服部署到本地服务器上，而本地服务器的IP地址是不被公网所识别的，所以我们需要给私服部署一个域名，并且为这个域名申请一个证书，这样就可以实现从公网访问到本地的docker私服了。
 
-# Linux
+## Linux
 
 ```bash
 # 1. 获取Harbor服务器的证书
@@ -26,7 +26,7 @@ sudo update-ca-certificates
 sudo systemctl restart docker
 ```
 
-# Windows
+## Windows
 
 ```bash
 # 在git Bash中执行以下命令

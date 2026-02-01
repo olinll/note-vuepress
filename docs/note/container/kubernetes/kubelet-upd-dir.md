@@ -10,7 +10,7 @@ kubelet的默认工作目录（存储目录）是`/var/lib/kubelet`，会存放v
 
 本文中，我们会把docker的工作目录从`/var/lib/kubelet`改到`/data/kubelet`，其中`/data`目录挂载了数据盘。
 
-# 思路
+## 思路
 
 想到两个方法：
 
@@ -19,9 +19,9 @@ kubelet的默认工作目录（存储目录）是`/var/lib/kubelet`，会存放v
 
 修改kubelet配置之前，为了保证不影响节点上的服务，最好先对节点操作禁止调度和驱逐。
 
-# 正文
+## 正文
 
-## 修改配置法
+### 修改配置法
 
 1、停止kubelet
 
@@ -80,7 +80,7 @@ rm /var/lib/kubelet/pods.old -rf
 rm /var/lib/kubelet/pod-resources.old -rf
 ```
 
-# 软链法
+## 软链法
 
 1、停止kubelet
 
@@ -121,7 +121,7 @@ ps -aux | grep kubelet | grep root-dir
 rm /var/lib/kubelet.old -rf
 ```
 
-# kubeadm指定kubelet工作目录
+## kubeadm指定kubelet工作目录
 
 与其临渴掘井，不如未雨绸缪。能否在使用kubeadm部署k8s集群的时候，直接指定好kubelet的工作目录？必须是可以的。
 

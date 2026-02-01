@@ -9,7 +9,7 @@ tags:
 
 仅复制教程，未验证可行性
 
-# 安装
+## 安装
 
 添加 mongodb 软件仓库
 
@@ -27,7 +27,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 yum install -y mongodb-org
 ```
 
-# 配置
+## 配置
 
 **修改配置文件**
 

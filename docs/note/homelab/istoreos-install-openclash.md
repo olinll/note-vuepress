@@ -14,7 +14,7 @@ permalink: /note/homelab/istoreos-install-openclash/
 
 [Clash内核](https://github.com/MetaCubeX/mihomo)
 
-# 安装
+## 安装
 
 接下来开始安装OpenClash
 
@@ -47,6 +47,6 @@ apk add -q --force-overwrite --clean-protected --allow-untrusted /tmp/openclash.
 
 安装完成之后刷新网页即可看到OpenClash出现
 
-# 配置
+## 配置
 
 插件启动之前请先确认下Clash内核，如果无法下载可以手动下载[Clash内核](https://github.com/MetaCubeX/mihomo/releases)后解压到`/etc/openclash/core/`文件夹，并将二进制文件命名为`clash_meta`

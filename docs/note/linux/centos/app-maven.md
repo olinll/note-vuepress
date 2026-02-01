@@ -9,7 +9,7 @@ tags:
 
 一般情况下，我们会使用下载文件后配置环境变量的方法进行安装
 
-# 下载解压
+## 下载解压
 
 这里的版本是 apache-maven-3.8.1-bin.tar.gz
 
@@ -34,7 +34,7 @@ tar -zxvf apache-maven-3.8.5-bin.tar.gz
 mv apache-maven-3.8.5 /opt/maven-3.8.5/
 ```
 
-# 配置环境
+## 配置环境
 
 ```bash
 # 系统环境变量配置
@@ -52,7 +52,7 @@ source /etc/profile
 mvn -version
 ```
 
-# maven setting.xml配置
+## maven setting.xml配置
 
 - localRepository 为本地仓库地址
 - server可配置密码密钥等信息

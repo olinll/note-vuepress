@@ -12,9 +12,9 @@ permalink: /note/container/kubernetes/kubesphere-install/
 
 参考教程：[离线安装 KubeSphere](https://www.kubesphere.io/zh/docs/v4.1/03-installation-and-upgrade/02-install-kubesphere/04-offline-installation/)
 
-# 正文
+## 正文
 
-## 1、安装依赖包
+### 1、安装依赖包
 
 所有节点需要安装必要依赖
 
@@ -22,7 +22,7 @@ permalink: /note/container/kubernetes/kubesphere-install/
 yum install -y socat conntrack
 ```
 
-## 2、导入文件包并修改配置文件
+### 2、导入文件包并修改配置文件
 
 以下是文件说明，已经放在网盘了，地址：
 
@@ -100,7 +100,7 @@ spec:
 
 ```
 
-## 3、创建镜像仓库（可选）
+### 3、创建镜像仓库（可选）
 
 如果自己存在镜像仓库可以直接配置到config文件内（目前没有配置成功过，所以默认自己搭建一个仓库，将数据目录放到数据盘下）
 
@@ -174,7 +174,7 @@ rm -rf /mnt/registry
 
 ![启动成功](https://olinl-note.oss-cn-shanghai.aliyuncs.com/note/image-20250222214834331.png)
 
-## 4、推送镜像至仓库
+### 4、推送镜像至仓库
 
 运行脚本创建harbor项目
 
@@ -206,7 +206,7 @@ passwd="Harbor12345"
 
 ![image-20250222220209143](https://olinl-note.oss-cn-shanghai.aliyuncs.com/note/image-20250222220209143.png)
 
-## 5、创建Kubernetes集群
+### 5、创建Kubernetes集群
 
 执行命令
 
@@ -224,7 +224,7 @@ passwd="Harbor12345"
 
 ![image-20250222221103082](https://olinl-note.oss-cn-shanghai.aliyuncs.com/note/image-20250222221103082.png)
 
-## 6、安装Kubesphere
+### 6、安装Kubesphere
 
 ```shell
 helm upgrade --install -n kubesphere-system --create-namespace ks-core ks-core-1.1.3.tgz \
@@ -241,7 +241,7 @@ helm upgrade --install -n kubesphere-system --create-namespace ks-core ks-core-1
 
 显示了登录的地址和默认账号密码，可以直接登录
 
-## 7、自己打包离线包（可选）
+### 7、自己打包离线包（可选）
 
 因为本文提供的镜像包是默认官方的，如果有其他需求请自己打包
 
@@ -255,7 +255,7 @@ helm upgrade --install -n kubesphere-system --create-namespace ks-core ks-core-1
 ./kk artifact export -m manifest-sample.yaml -o kubesphere.tar.gz
 ```
 
-## 8、其他文件
+### 8、其他文件
 
 其他文件官方获取方式：
 
@@ -291,17 +291,17 @@ helm fetch https://charts.kubesphere.io/main/ks-core-${VERSION}.tgz
 ./kk create config --with-kubernetes v1.26.12
 ```
 
-# 离线模式安装插件卡住
+## 离线模式安装插件卡住
 
 卡死的原因是离线模式无网络，拉取镜像失败
 
-## 从扩展模块拉取安装包
+### 从扩展模块拉取安装包
 
 ```bash
 kubectl cp -n kubesphere-system extensions-museum-7b5f75bbf8-s84h8:/charts/gateway-1.0.2.tgz /app/gateway-1.0.2.tgz
 ```
 
-## 进行安装
+### 进行安装
 
 需要指明命名空间，名称，必须和原来的一致
 

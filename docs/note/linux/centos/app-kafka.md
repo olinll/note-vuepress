@@ -14,7 +14,7 @@ tags:
 
 ![下载Kafka软件包](./img/centos-all-345422.png)
 
-# 安装
+## 安装
 
 因为选择下载的是 .zip 文件，直接跳过安装，一步到位。
 
@@ -28,7 +28,7 @@ windows直接解压即可，windows环境下指令是在kafka_2.13-3.5.1\bin\win
 
 执行命令当前目录 `D:\env-java\kafka_2.13-3.5.1`
 
-# 修改配置
+## 修改配置
 
 修改 kafka-server 和zookeeper配置
 
@@ -46,7 +46,7 @@ log.dirs=/env-java/kafka_2.13-3.5.1/kafka-logs
 # /：表示当前的根路径，即D盘。没有就会创建对应的文件夹。
 ```
 
-# 启动服务
+## 启动服务
 
 ```bash
 # 启动ZooKeeper
@@ -77,7 +77,7 @@ cd /opt/kafka
 bin/kafka-server-start.sh -daemon config/server.properties
 ```
 
-# 使用
+## 使用
 
 ```bash
 # 创建主题

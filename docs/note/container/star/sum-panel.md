@@ -20,9 +20,9 @@ github：[sun-panel - GitHub](https://github.com/hslr-s/sun-panel)
 
 部署教程：[https://doc.sun-panel.top/zh_cn/usage/quick_deploy.html](https://doc.sun-panel.top/zh_cn/usage/quick_deploy.html)
 
-# 安装
+## 安装
 
-## docker-compose配置文件
+### docker-compose配置文件
 
 ```yaml title="docker-compose.yml"
 services:
@@ -47,7 +47,7 @@ networks:
     name: lin-net
 ```
 
-## 配置文件
+### 配置文件
 
 如果使用mysql/redis，找到项目的[配置文件](https://doc.sun-panel.top/zh_cn/advanced/config.html
 
@@ -97,9 +97,9 @@ prefix=sun_panel:
 db=0
 ```
 
-# 美化
+## 美化
 
-## 添加毛玻璃效果
+### 添加毛玻璃效果
 
 ```css
 /* 分组毛玻璃 */
@@ -116,7 +116,7 @@ db=0
 }
 ```
 
-## 在首页添加三张图片
+### 在首页添加三张图片
 
 ```javascript
 
@@ -234,7 +234,7 @@ css
     }
 }
 ```
-## 添加鼠标悬停动画
+### 添加鼠标悬停动画
 
 ```css
 /*鼠标悬停动画 */

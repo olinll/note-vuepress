@@ -15,7 +15,7 @@ JumpServer 官网：[jumpserver](https://www.jumpserver.org/)
 
 使用文档：[JumpServer使用文档](https://docs.jumpserver.org/zh/v4/)
 
-# 部署
+## 部署
 
 不推荐在已有的机器上面进行部署，创建一个干净的机器，然后按照文档进行安装。
 
@@ -25,7 +25,7 @@ Linux单机部署文档：[Linux单机部署](https://docs.jumpserver.org/zh/v4/
 
 > 官网的部署文档非常全面，可以前往官方文档进行查看。
 
-# 问题
+## 问题
 
 1、如果启动了很久还是无法访问，请查找问题，如果因为redis容器无法启动，并且报下面的问题，可以使用这种方式处理
 ```shell

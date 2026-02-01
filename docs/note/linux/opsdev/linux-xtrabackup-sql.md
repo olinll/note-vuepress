@@ -6,7 +6,7 @@ permalink: /note/linux/opsdev/linux-xtrabackup-sql/
 Xtrabackup 是 Percona 公司开发的一个 MySQL 数据库备份工具，它可以在不停止数据库服务的情况下进行备份，并且支持增量备份。
 
 
-# 安装部署
+## 安装部署
 
 ```bash
 # 下载二进制的 Xtrabackup 压缩包，开箱即用：
@@ -29,7 +29,7 @@ xtrabackup --version
 xtrabackup version 8.0.34-29 based on MySQL server 8.0.34 Linux (x86_64) (revision id: 5ba706ee)
 ```
 
-# MySQL备份需要的权限
+## MySQL备份需要的权限
 
 > 1、Reload：用于执行 FLUSH TABLES WITH REDO LOCK 和 FLUSH NO_WRITE_TO_BINLOG TABLES 是必需权限。
 > 2、Replication client：用于执行 SHOW MASTER STATUS 和 SHOW SLAVE STATUS 查看位点信息，是必需权限。
@@ -47,7 +47,7 @@ gtid_mode=ON
 enforce_gtid_consistency=ON
 ```
 
-# MySQL8.1需要使用非root用户
+## MySQL8.1需要使用非root用户
 
 ```sql
 CREATE USER 'bkpuser'@'localhost' IDENTIFIED BY 's3cr%T';
@@ -62,7 +62,7 @@ GRANT SELECT ON performance_schema.replication_group_members TO bkpuser@'localho
 ```
 
 
-# 全量备份
+## 全量备份
 
 ```bash
 # 运行之前先保证备份目录是否存在

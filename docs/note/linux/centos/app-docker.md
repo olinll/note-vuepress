@@ -28,7 +28,7 @@ Linux 内核：官方建议 3.10 以上，3.8 以上貌似也可。
 
 :::
 
-# 安装
+## 安装
 
 ```bash
 # 查看当前内核版本
@@ -56,9 +56,9 @@ yum -y install docker-ce
 #yum -y install docker-ce-17.12.1.ce
 ```
 
-# 配置docker服务
+## 配置docker服务
 
-## 常用 Docker 命令
+### 常用 Docker 命令
 
 ```bash
 # 重启Docker服务
@@ -74,7 +74,7 @@ systemctl stop docker
 systemctl enable docker
 ```
 
-## 修改docker数据目录位置
+### 修改docker数据目录位置
 
 原文件位置：`/var/lib/docker/`
 
@@ -86,7 +86,7 @@ systemctl enable docker
 }
 ```
 
-## 配置容器日志
+### 配置容器日志
 
 ```json title="/etc/docker/daemon.json"
 "log-opts": {"max-size":"500m", "max-file":"3"}
@@ -98,7 +98,7 @@ systemctl enable docker
 > 
 > _注：设置后只对新添加的容器有效。_
 
-## 指定私服仓库地址
+### 指定私服仓库地址
 
 ```json title="/etc/docker/daemon.json"
 "insecure-registries": [
@@ -106,7 +106,7 @@ systemctl enable docker
 ]
 ```
 
-## 镜像站点
+### 镜像站点
 
 ```json title="/etc/docker/daemon.json"
 "registry-mirrors": [

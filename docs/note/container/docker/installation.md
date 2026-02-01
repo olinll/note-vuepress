@@ -15,7 +15,7 @@ tags:
 :::
 
 
-# 一行命令安装（推荐）
+## 一行命令安装（推荐）
 
 专为国内用户优化的 Docker 镜像加速解决方案，一键配置即可享受极速下载体验
 
@@ -23,7 +23,7 @@ tags:
 bash <(curl -sSL https://xuanyuan.cloud/docker.sh)
 ```
 
-# Ubuntu 手动安装
+## Ubuntu 手动安装
 
 ```bash
 # 安装前先卸载操作系统默认安装的docker，
@@ -60,7 +60,7 @@ sudo docker version
 sudo systemctl status docker
 ```
 
-# CentOS / RHEL
+## CentOS / RHEL
 
 ```bash
 # 更新 yum 包
@@ -99,7 +99,7 @@ docker version
 systemctl status docker
 ```
 
-# Alpine
+## Alpine
 
 ```bash
 # 更新软件源 确保有community源

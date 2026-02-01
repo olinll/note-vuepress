@@ -4,7 +4,7 @@ createTime: 2026/02/01 13:55:38
 permalink: /note/homelab/frp-depoy/
 ---
 
-# 前言
+## 前言
 
 Frp可以通过有公网IP的的服务器将内网的主机暴露给互联网，从而实现通过外网能直接访问到内网主机；frp有服务端和客户端，服务端需要装在有公网ip的服务器上，客户端装在内网主机上。
 
@@ -12,7 +12,7 @@ Frp可以通过有公网IP的的服务器将内网的主机暴露给互联网，
 
 GitHub仓库地址：[github.com/fatedier/frp](https://github.com/fatedier/frp)
 
-# 准备工作
+## 准备工作
 
 Linux下载frp_xxxx_linux_amd64的
 
@@ -24,7 +24,7 @@ frps为服务端
 
 客户端不需要公网ip，服务端需要公网ip，并且将服务端口映射出来。
 
-# 配置文件
+## 配置文件
 
 ```bash
 # 赋予运行权限
@@ -98,9 +98,9 @@ localPort = 443
 remotePort = 443# 暴露服务的公网入口
 ```
 
-# 后台运行
+## 后台运行
 
-## 宝塔面板
+### 宝塔面板
 
 如果使用宝塔面板，可以使用**进程守护管理器**这个插件，配置一个守护进程
 
@@ -108,7 +108,7 @@ remotePort = 443# 暴露服务的公网入口
 
 ![守护进程配置](https://io.jianglin.cc:8443/img/20251110/cfe0388fae52e3fe5df7a640f7620eb8.png)
 
-## systemctl
+### systemctl
 
 使用systemctl 管理Frp
 

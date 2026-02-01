@@ -23,9 +23,9 @@ Beszel官网：[beszel.dev](https://beszel.dev/zh/)
 
 永远不要将服务放在一台机器上，All In One除外🐶。站长家里有几台主机的出网在移动宽带，所以可以判断出是主宽带，备用宽带，还是断电，还是部分主机死机。
 
-# 部署服务
+## 部署服务
 
-## 部署Hub
+### 部署Hub
 
 你可以通过docker部署，或者二进制部署
 
@@ -95,7 +95,7 @@ sudo systemctl enable beszel.service
 sudo systemctl start beszel.service
 ```
 
-## 部署Agent
+### 部署Agent
 在Hub添加客户端，根据需求，进行复制命令进行安装即可
 ![](./img/linux-beszel-install-307700.png)
 
@@ -191,8 +191,8 @@ sudo systemctl enable beszel-agent.service
 sudo systemctl start beszel-agent.service
 ```
 
-# 常见问题
-## SMART问题
+## 常见问题
+### SMART问题
 如果出现了NVME硬盘SMART状态UNKNOWN，请修改服务配置文件  
 ![](./img/linux-beszel-install-710515.png)
 [S.M.A.R.T.监控 | Beszel](https://beszel.dev/zh/guide/smart-data)
@@ -242,7 +242,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart beszel-agent
 ```
 
-## 监控其他硬盘
+### 监控其他硬盘
 某些情况下，可能将Agent端安装在VPC上，我们可以修改配置文件，让Agent监控目录，或者硬盘
 这里有个问题，`lvm`磁盘是无法直接监控的，我们可以监控挂载出来的目录
 **Docker方式**
@@ -273,6 +273,6 @@ Environment="EXTRA_FILESYSTEMS=sdb,sdc1,mmcblk0,/mnt/network-share"
 您可以使用双下划线为设备指定自定义名称。例如，`sdc1__Jellyfin Media`。这将在图表中使用"Jellyfin Media"作为设备名称。
 :::
 
-## GPU监控
+### GPU监控
 
 [GPU监控 | Beszel](https://beszel.dev/zh/guide/gpu#intel)

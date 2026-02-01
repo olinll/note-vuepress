@@ -9,12 +9,12 @@ const note: ThemeCollectionItem = defineCollection({
   sidebar: [
   {
     text: "容器化",
-    icon: "material-symbols:container",
+    icon: "line-md:folder-multiple-filled",
     prefix: "container",
     items: [
       {
         text: "Docker",
-        icon: "logos:docker-icon",
+        icon: "line-md:list",
         prefix: "docker",
         items: [
           "docker-install"
@@ -24,15 +24,28 @@ const note: ThemeCollectionItem = defineCollection({
   },
   {
     text: "Linux",
-    icon: "logos:linux-tux",
+    icon: "line-md:folder-multiple-filled",
     prefix: "linux",
     items: [
       {
         text: "Centos",
-        icon: "logos:centos-icon",
+        icon: "line-md:list",
         prefix: "centos",
+        collapsed: false,
         items: [
-          "centos-all"
+         "installation",
+         "optimize",
+         "app-jdk",
+         "app-maven",
+         "app-nginx",
+         "app-redis",
+         "app-mysql",
+         "app-docker",
+         "app-squid",
+         "app-nexus",
+         "app-kafka",
+         "app-mongodb",
+         "app-samba",
         ]
       }
     ]

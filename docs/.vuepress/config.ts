@@ -25,7 +25,7 @@ export default defineUserConfig({
   ],
 
   bundler: viteBundler(),
-  // shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用,热更新
+  shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用,热更新
 
   //主题配置
   theme: plumeTheme({

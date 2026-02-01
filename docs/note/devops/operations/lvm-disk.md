@@ -1,8 +1,8 @@
 ---
 title: LVM 磁盘工具
 createTime: 2026/02/01 14:18:34
-permalink: /note/linux/opsdev/lvm-disk/
----
+permalink: /note/devops/operations/lvm-disk/
+--- 
 
 >LVM是Linux系统中用于管理磁盘分区的命令行工具。该工具通过纯软件方式将多个块设备组织为逻辑卷，支持在线调整逻辑卷空间并集成快照功能以实现数据备份。
 

@@ -1,7 +1,7 @@
 ---
 title: 部署 Frp 服务
 createTime: 2026/02/01 13:55:38
-permalink: /note/homelab/frp-depoy/
+permalink: /note/homelab/frp-deploy/
 ---
 
 ## 前言

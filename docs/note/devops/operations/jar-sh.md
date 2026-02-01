@@ -1,7 +1,7 @@
 ---
 title: 运行 JAR 脚本
 createTime: 2026/02/01 14:16:40
-permalink: /note/linux/opsdev/jar-sh/
+permalink: /note/devops/operations/jar-sh/
 ---
 ```sh title="server.sh"
 #!/bin/bash

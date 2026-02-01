@@ -1,7 +1,7 @@
 ---
 title: 定期删除日志脚本
 createTime: 2026/02/01 14:16:12
-permalink: /note/linux/opsdev/log-rm-sh/
+permalink: /note/devops/operations/log-rm-sh/
 ---
 
 在Linux系统的日常运维中，日志文件的不断累积会逐渐消耗宝贵的存储资源，甚至影响系统性能。面对日益增长的日志数据，定期清理已成为保障系统健康运行不可或缺的一环。本文将介绍如何高效地管理和定期清除Linux系统中的日志文件，确保您的服务器既能保持最佳性能，又能充分利用存储资源。

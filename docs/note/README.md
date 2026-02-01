@@ -10,16 +10,8 @@ externalLinkIcon: false
 pageClass: note-page
 ---
 
-## 容器化
+::: center
+## 👋 欢迎来到我的笔记
 
-### Docker
-
-[安装 Docker](./container/docker/docker-install)    [111](./container/docker/111)
-
----
-
-## Linux
-
-### centos
-
-[安装 centos](./linux/centos/centos-all)
+这里记录了我的学习历程和技术总结
+:::

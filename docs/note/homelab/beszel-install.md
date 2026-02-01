@@ -9,7 +9,7 @@ Beszel官网：[beszel.dev](https://beszel.dev/zh/)
 
 主要有2个组件：**中心 (hub)** 和 **代理 (agent)**。就是一个管理端，一个监控节点。
 
-::note[官方文档]
+:::note 官方文档
 
 下面描述的两个通信方向中的一个需要正常工作。
 
@@ -17,7 +17,7 @@ Beszel官网：[beszel.dev](https://beszel.dev/zh/)
 
 中心会向代理程序发起 TCP 连接，因此请确保代理系统上的端口未被阻止。
 
-::
+:::
 
 从官网可以了解到，Hub端到Agent只需要单向通信即可，所以我们可以在云服务器上部署Hub端，在家里NAS，软路由，All In One中部署Agent实现监控。就算外网断了，也可以正常发送告警通知。
 
@@ -269,7 +269,7 @@ Environment="EXTRA_FILESYSTEMS=sdb,sdc1,mmcblk0,/mnt/network-share"
 
 编辑服务后，使用 `systemctl daemon-reload` 重新加载系统单元，然后使用 `systemctl restart beszel-agent` 重启服务。
 
-:::note[自定义名称]
+::: note 自定义名称
 您可以使用双下划线为设备指定自定义名称。例如，`sdc1__Jellyfin Media`。这将在图表中使用"Jellyfin Media"作为设备名称。
 :::
 

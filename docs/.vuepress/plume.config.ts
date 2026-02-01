@@ -10,9 +10,14 @@
  * 特别的，请不要在两个配置文件中重复配置相同的项，当前文件的配置项会覆盖 `.vuepress/config.ts` 文件中的配置
  */
 
+import { execSync } from 'node:child_process'
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import navbar from './navbar'
 import collections from './collections'
+
+const hash = execSync('git rev-parse --short=7 HEAD').toString().trim()
+const date = execSync('git show -s --format=%cd --date=format:"%Y-%m-%d %H:%M:%S" HEAD').toString().trim()
+const repo = 'https://github.com/olinll/note-vuepress'
 
 /**
  * @see https://theme-plume.vuejs.press/config/theme/
@@ -43,7 +48,7 @@ export default defineThemeConfig({
   /* 站点页脚 */
   footer: {
     message: '',
-    copyright: 'Code licensed under MIT, documentation under CC BY-SA 4.0',
+    copyright: `<div style="width: 100%; text-align: right;">本网站代码 <a href="${repo}" target="_blank">已开源</a> (<a href="${repo}/commit/${hash}" target="_blank">${hash}</a> @ ${date})</div>`,
   },
 
   /**

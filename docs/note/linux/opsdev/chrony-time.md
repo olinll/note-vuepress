@@ -1,7 +1,7 @@
 ---
 title: 时间校时
 createTime: 2026/02/01 14:18:10
-permalink: /note/linux/opsdev/linux-chrony/
+permalink: /note/linux/opsdev/chrony-time/
 ---
 
 

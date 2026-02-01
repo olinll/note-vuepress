@@ -109,11 +109,11 @@ const note: ThemeCollectionItem = defineCollection({
         link: "opsdev/",
         collapsed: false,
         items: [
-         "linux-lvm",// LVM 磁盘工具
-          "linux-jar-sh",// 运行 Jar 包
-          "linux-rm-sh",// 删除文件
-         "linux-chrony",// 时间校时
-         "linux-xtrabackup-sql",// Xtrabackup 备份工具
+         "lvm-disk",// LVM 磁盘工具
+          "jar-sh",// 运行 Jar 包
+          "log-rm-sh",// 删除文件
+         "chrony-time",// 时间校时
+         "xtrabackup-sql",// Xtrabackup 备份工具
         ]
       }
     ]

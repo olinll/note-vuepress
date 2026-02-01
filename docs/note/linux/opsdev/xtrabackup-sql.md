@@ -1,7 +1,7 @@
 ---
 title: Xtrabackup 备份工具
 createTime: 2026/02/01 14:17:06
-permalink: /note/linux/opsdev/linux-xtrabackup-sql/
+permalink: /note/linux/opsdev/xtrabackup-sql/
 ---
 Xtrabackup 是 Percona 公司开发的一个 MySQL 数据库备份工具，它可以在不停止数据库服务的情况下进行备份，并且支持增量备份。
 

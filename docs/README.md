@@ -13,7 +13,7 @@ config:
         -
           theme: brand
           text: 笔记目录 →
-          link: /note/
+          link: /note/guid/
         -
           theme: alt
           text: Blog

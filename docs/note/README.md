@@ -8,6 +8,7 @@ changelog: false
 contributors: false
 externalLinkIcon: false
 pageClass: note-page
+lastUpdated: false
 ---
 
 ::: center

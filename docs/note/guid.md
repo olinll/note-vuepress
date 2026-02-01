@@ -146,10 +146,10 @@ permalink: /note/guid/
 
 <div class="guid-group-title"><Icon name="line-md:list" /> PostgreSQL</div>
 <div class="guid-items">
-<RouterLink class="guid-item" to="/note/devops/installapp/pgsql/pgsql-install">pgsql-install</RouterLink>
-<RouterLink class="guid-item" to="/note/devops/installapp/pgsql/pgsql-config">pgsql-config</RouterLink>
-<RouterLink class="guid-item" to="/note/devops/installapp/pgsql/pgsql-fdw">pgsql-fdw</RouterLink>
-<RouterLink class="guid-item" to="/note/devops/installapp/pgsql/pgsql-backup">pgsql-backup</RouterLink>
+<RouterLink class="guid-item" to="/note/devops/installapp/postgresql/pgsql-install">安装 PostgreSQL</RouterLink>
+<RouterLink class="guid-item" to="/note/devops/installapp/postgresql/pgsql-config">配置</RouterLink>
+<RouterLink class="guid-item" to="/note/devops/installapp/postgresql/pgsql-fdw">外部表应用</RouterLink>
+<RouterLink class="guid-item" to="/note/devops/installapp/postgresql/pgsql-backup">备份与恢复</RouterLink>
 </div>
 
 <div class="guid-group-title"><Icon name="line-md:list" /> 系统运维</div>

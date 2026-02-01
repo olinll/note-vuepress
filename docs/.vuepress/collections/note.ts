@@ -6,12 +6,23 @@ const note: ThemeCollectionItem = defineCollection({
   dir: "note",
   title: "笔记",
   sidebar: [
-   {
-      text: "目录",
-      icon: "line-md:folder-multiple-filled",
-      prefix: "note",
-      link: "/note/guid/",
-   },
+    {
+      // text: "容器化",
+      // icon: "line-md:folder-multiple-filled",
+      // prefix: "note",
+      items: [
+        {
+          text: "主页",
+          icon: "line-md:home",
+          link: "/",
+        },
+        {
+          text: "目录",
+          icon: "line-md:list",
+          link: "/note/guid/",
+        },
+      ],
+    },
     {
       text: "容器化",
       icon: "line-md:folder-multiple-filled",
@@ -102,12 +113,12 @@ const note: ThemeCollectionItem = defineCollection({
           // link: "ubuntu/",
           collapsed: true,
           items: [
-           "ubuntu-install", // 安装 Ubuntu
-           "ubuntu-config", // 系统配置
-           "ubuntu-mysql", // 安装 Ubuntu mysql
+            "ubuntu-install", // 安装 Ubuntu
+            "ubuntu-config", // 系统配置
+            "ubuntu-mysql", // 安装 Ubuntu mysql
           ],
         },
-        
+
         {
           text: "Alpine",
           icon: "line-md:list",
@@ -174,7 +185,7 @@ const note: ThemeCollectionItem = defineCollection({
             {
               text: "PostgreSQL",
               icon: "line-md:list",
-              prefix: "pgsql",
+              prefix: "postgresql",
               // link: "pgsql/",
               collapsed: true,
               items: [
@@ -206,7 +217,7 @@ const note: ThemeCollectionItem = defineCollection({
       text: "HomeLab",
       icon: "line-md:folder-multiple-filled",
       prefix: "homelab",
-      // link: "homelab/",
+      link: "homelab/",
       collapsed: true,
       items: [
         {
@@ -225,15 +236,14 @@ const note: ThemeCollectionItem = defineCollection({
             "pve-qemu-guest-agent", // QEMU Guest Agent
           ],
         },
-        "baota-depoy-lskypro",//宝塔部署兰空图床
-        "frp-deploy",//部署Frp服务
-        "truenas-run-dockeralist",// 使用TrueNAS运行Alist容器
-        "immich-record",// Immich 记录
-        "istoreos-install-openclash",// 安装 OpenClash
-        "jumpserver-install",// 安装 Jumpserver
-        "beszel-install",// 安装 Beszel
-        "server-init-demo",// 服务器初始化配置（全）
-
+        "baota-depoy-lskypro", //宝塔部署兰空图床
+        "frp-deploy", //部署Frp服务
+        "truenas-run-dockeralist", // 使用TrueNAS运行Alist容器
+        "immich-record", // Immich 记录
+        "istoreos-install-openclash", // 安装 OpenClash
+        "jumpserver-install", // 安装 Jumpserver
+        "beszel-install", // 安装 Beszel
+        "server-init-demo", // 服务器初始化配置（全）
       ],
     },
     {

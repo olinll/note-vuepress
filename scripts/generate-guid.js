@@ -81,32 +81,34 @@ function renderSidebarItem(item, basePath, level = 0) {
   }
   
   // Handle group/object item
+  
+  // Skip if text is empty
+  if (!item.text) return []
+
   const currentPath = resolveLink(basePath, item.prefix)
   
   // Render Header
   let text = item.text || ''
   const icon = item.icon ? `<Icon name="${item.icon}" /> ` : ''
   
-  if (text) {
-    if (level === 0) {
-      lines.push(`\n## ${icon}${text}`)
-    } else {
-      // Use bold text or H3/H4 for sub-headers
-      // Add margin-top for separation
-      
-      // If group has a link, make the title clickable
-      let content = `${icon}${text}`
-      if (item.link) {
-        // Construct full link path
-        // item.link is relative to basePath (parent), not currentPath (which includes prefix for children)
-        const linkPath = item.link.startsWith('/') 
-          ? item.link 
-          : path.posix.join(basePath, item.link)
-        content = `<RouterLink to="${linkPath}" style="color: inherit; text-decoration: none;">${content}</RouterLink>`
-      }
-      
-      lines.push(`\n<div class="guid-group-title">${content}</div>`)
+  if (level === 0) {
+    lines.push(`\n## ${icon}${text}`)
+  } else {
+    // Use bold text or H3/H4 for sub-headers
+    // Add margin-top for separation
+    
+    // If group has a link, make the title clickable
+    let content = `${icon}${text}`
+    if (item.link) {
+      // Construct full link path
+      // item.link is relative to basePath (parent), not currentPath (which includes prefix for children)
+      const linkPath = item.link.startsWith('/') 
+        ? item.link 
+        : path.posix.join(basePath, item.link)
+      content = `<RouterLink to="${linkPath}" style="color: inherit; text-decoration: none;">${content}</RouterLink>`
     }
+    
+    lines.push(`\n<div class="guid-group-title">${content}</div>`)
   }
   
   if (item.items) {

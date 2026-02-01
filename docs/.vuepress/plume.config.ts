@@ -13,10 +13,22 @@
 import { execSync } from 'node:child_process'
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import navbar from './navbar'
-import collections from './collections'
+// import collections from './collections'
+import collections from './collections/index'
 
-const hash = execSync('git rev-parse --short=7 HEAD').toString().trim()
-const date = execSync('git show -s --format=%cd --date=format:"%Y-%m-%d %H:%M:%S" HEAD').toString().trim()
+const getGitInfo = () => {
+  try {
+    const hash = execSync('git rev-parse --short=7 HEAD').toString().trim()
+    const date = execSync('git show -s --format=%cd --date=format:"%Y-%m-%d %H:%M:%S" HEAD').toString().trim()
+    return { hash, date }
+  } catch {
+    const now = new Date()
+    const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`
+    return { hash: '0000000', date }
+  }
+}
+
+const { hash, date } = getGitInfo()
 const repo = 'https://github.com/olinll/note-vuepress'
 
 /**
@@ -48,7 +60,7 @@ export default defineThemeConfig({
   /* 站点页脚 */
   footer: {
     message: '',
-    copyright: `<div style="width: 100%; text-align: right;">本网站代码 <a href="${repo}" target="_blank">已开源</a> (<a href="${repo}/commit/${hash}" target="_blank">${hash}</a> @ ${date})</div>`,
+    copyright: `<div class="custom-copyright" style="width: 100%; text-align: right; font-size: 12px;">本站代码 <a href="${repo}" target="_blank">已开源</a> (<a href="${repo}/commit/${hash}" target="_blank">${hash} @ ${date})</a></div>`,
   },
 
   /**

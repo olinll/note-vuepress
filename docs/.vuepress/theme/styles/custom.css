@@ -51,3 +51,41 @@
 .vp-image.light.logo{
   border-radius: 50%;
 }
+
+/* 底部版权信息样式 */
+.custom-copyright a {
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  color: var(--vp-c-text-2);
+}
+
+.custom-copyright a:hover {
+  text-decoration: none !important;
+  color: var(--vp-c-brand-1);
+}
+
+/* 笔记页面链接样式 - 按钮风格 */
+.note-page{
+
+  .vp-doc .vp-link {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0 4px;
+    border-radius: 6px;
+    /* background-color: var(--vp-c-brand-soft); */
+    color: var(--vp-c-brand-1);
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid transparent;
+  }
+
+  .vp-doc .vp-link:hover {
+    background-color: var(--vp-c-brand-1);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(35, 125, 220, 0.25);
+    text-decoration: none !important;
+  }
+
+}

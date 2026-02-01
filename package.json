@@ -22,9 +22,12 @@
     "vuepress-theme-plume": "1.0.0-rc.187"
   },
   "pnpm": {
+    "overrides": {
+      "esbuild": "npm:esbuild-wasm@0.25.0",
+      "rollup": "npm:@rollup/wasm-node@4.57.1"
+    },
     "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild"
+      "@parcel/watcher"
     ]
   },
   "engines": {

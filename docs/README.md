@@ -1,5 +1,6 @@
 ---
 home: true
+backToTop: false
 config:
   -
     type: doc-hero

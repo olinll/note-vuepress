@@ -83,7 +83,7 @@ function renderSidebarItem(item, basePath, level = 0) {
   // Handle group/object item
   
   // Skip if text is empty
-  if (!item.text) return []
+  if (!item.text || !item.text.trim()) return []
 
   const currentPath = resolveLink(basePath, item.prefix)
   
@@ -92,7 +92,14 @@ function renderSidebarItem(item, basePath, level = 0) {
   const icon = item.icon ? `<Icon name="${item.icon}" /> ` : ''
   
   if (level === 0) {
-    lines.push(`\n## ${icon}${text}`)
+    let headerContent = `${icon}${text}`
+    if (item.link) {
+      const linkPath = item.link.startsWith('/') 
+        ? item.link 
+        : path.posix.join(basePath, item.link)
+      headerContent = `<RouterLink to="${linkPath}" style="color: inherit; text-decoration: none;">${headerContent}</RouterLink>`
+    }
+    lines.push(`\n## ${headerContent}`)
   } else {
     // Use bold text or H3/H4 for sub-headers
     // Add margin-top for separation
@@ -191,6 +198,12 @@ function generateGuid() {
 title: 目录
 createTime: 2026/02/01 22:34:56
 permalink: /note/guid/
+aside: false
+editLink: false
+changelog: false
+contributors: false
+externalLinkIcon: false
+pageClass: note-page
 ---
 
 <style>

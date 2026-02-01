@@ -2,6 +2,12 @@
 title: 目录
 createTime: 2026/02/01 22:34:56
 permalink: /note/guid/
+aside: false
+editLink: false
+changelog: false
+contributors: false
+externalLinkIcon: false
+pageClass: note-page
 ---
 
 <style>
@@ -161,7 +167,7 @@ permalink: /note/guid/
 <RouterLink class="guid-item" to="/note/devops/operations/xtrabackup-sql">Xtrabackup 备份工具</RouterLink>
 </div>
 
-## <Icon name="line-md:folder-multiple-filled" /> HomeLab
+## <RouterLink to="/note/homelab/" style="color: inherit; text-decoration: none;"><Icon name="line-md:folder-multiple-filled" /> HomeLab</RouterLink>
 
 <div class="guid-group-title"><Icon name="line-md:list" /> Proxmox VE</div>
 <div class="guid-items">

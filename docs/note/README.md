@@ -1,5 +1,5 @@
 ---
-title: 笔记目录
+title: 笔记
 createTime: 2026/01/31 20:33:23
 permalink: /note/
 aside: false

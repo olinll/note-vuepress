@@ -19,7 +19,14 @@ Linux 内核：官方建议 3.10 以上，3.8 以上貌似也可。
 
 注意：本文的命令使用的是 root 用户登录执行，不是 root 的话所有命令前面要加 sudo
 
+:::tip
+
 现在可以使用[轩辕镜像站](https://xuanyuan.cloud)的一键安装脚本进行安装了
+
+
+[前往 **安装Docker** 深入了解](/note/container/docker/docker-install/#安装-docker){.read-more}
+
+:::
 
 # 安装
 

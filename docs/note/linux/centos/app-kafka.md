@@ -1,5 +1,5 @@
 ---
-title: 安装 kafka
+title: 安装 Kafka
 createTime: 2026/01/31 23:11:03
 permalink: /note/linux/centos/app-kafka/
 tags:

@@ -5,7 +5,6 @@ const note: ThemeCollectionItem = defineCollection({
   type: 'doc',
   dir: 'note',
   title: '笔记',
-  prefix: 'note',
   sidebar: [
   {
     text: "容器化",
@@ -16,14 +15,54 @@ const note: ThemeCollectionItem = defineCollection({
         text: "Docker",
         icon: "line-md:list",
         prefix: "docker",
+        collapsed: false,
+        link: "docker/",
         items: [
-          "docker-install"
+          "installation",// 安装 Docker
+          "prod-config",// 生产配置
+          "get-cert",// 获取证书
+          "docker-bash",// 操作命令
+          "uninstall",// 卸载 Docker
+        ]
+      },
+      {
+        text: "Docker Compose",
+        icon: "line-md:list",
+        prefix: "compose",
+        collapsed: false,
+        link: "compose/",
+        items: [
+          "install",// 安装 Compose
+          "bash-compose",// 常用命令
+        ]
+      },
+       {
+        text: "Kubernetes",
+        icon: "line-md:list",
+        prefix: "kubernetes",
+        collapsed: false,
+        link: "kubernetes/",
+        items: [
+          "kubesphere-install",// 安装 Kubernetes
+          "kubernetes-upd-dir",// 修改数据目录
+          "kubelet-upd-dir",// 修改 Kubelet 默认工作目录
+        ]
+      },
+      {
+        text: "项目推荐",
+        icon: "line-md:list",
+        prefix: "star",
+        collapsed: false,
+        link: "star/",
+        items: [
+          "memos",// Memos 笔记
+          "sum-panel",// Sun-Panel面板
         ]
       }
     ]
   },
   {
-    text: "Linux",
+    text: "Linux 系统",
     icon: "line-md:folder-multiple-filled",
     prefix: "linux",
     items: [
@@ -31,25 +70,69 @@ const note: ThemeCollectionItem = defineCollection({
         text: "Centos",
         icon: "line-md:list",
         prefix: "centos",
+        link: "centos/",
         collapsed: false,
         items: [
-         "installation",
-         "optimize",
-         "app-jdk",
-         "app-maven",
-         "app-nginx",
-         "app-redis",
-         "app-mysql",
-         "app-docker",
-         "app-squid",
-         "app-nexus",
-         "app-kafka",
-         "app-mongodb",
-         "app-samba",
+         "installation",// 安装 CentOS
+         "optimize",// 优化 CentOS
+         "app-jdk",// 安装 JDK
+         "app-maven",// 安装 Maven
+         "app-nginx",// 安装 Nginx
+         "app-redis",// 安装 Redis
+         "app-mysql",// 安装 MySQL
+         "app-docker",// 安装 Docker
+         "app-squid",// 安装 Squid
+         "app-nexus",// 安装 Nexus
+         "app-kafka",// 安装 Kafka
+         "app-mongodb",// 安装 MongoDB
+         "app-samba",// 安装 Samba
+        ]
+      },
+      {
+        text: "Alpine",
+        icon: "line-md:list",
+        prefix: "alpine",
+        link: "alpine/",
+        collapsed: false,
+        items: [
+         "install",// 安装 Alpine
+         "config",// 配置 Alpine
+         "bash-apk",// 常用命令
+         "app-docker",// 安装 Docker
+         "app-frp",// 安装 Frp 服务
+        ]
+      },
+      {
+        text: "系统运维",
+        icon: "line-md:list",
+        prefix: "opsdev",
+        link: "opsdev/",
+        collapsed: false,
+        items: [
+         "linux-lvm",// LVM 磁盘工具
+          "linux-jar-sh",// 运行 Jar 包
+          "linux-rm-sh",// 删除文件
+         "linux-chrony",// 时间校时
+         "linux-xtrabackup-sql",// Xtrabackup 备份工具
         ]
       }
     ]
-  }
+  },
+   {
+    text: "HomeLab",
+    icon: "line-md:folder-multiple-filled",
+    prefix: "homelab",
+    link: "homelab/",
+    collapsed: false,
+    items: 'auto'
+   },
+   {
+    text: "其他",
+    icon: "line-md:folder-multiple-filled",
+    prefix: "other",
+    collapsed: false,
+    items: 'auto'
+   }
 ],
 })
 

@@ -1,11 +1,13 @@
 ---
-title: 搭建 Samba 服务
+title: 安装 Samba 服务
 createTime: 2026/01/31 23:11:03
 permalink: /note/linux/centos/app-samba/
 tags:
   - Centos
   - Samba
 ---
+
+> Samba 是一个开源的软件，它实现了 SMB/CIFS 协议，允许在不同操作系统之间共享文件和打印机。
 
 # 安装
 

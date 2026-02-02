@@ -39,6 +39,7 @@ const note: ThemeCollectionItem = defineCollection({
             "prod-config", // 生产配置
             "get-cert", // 获取证书
             "docker-bash", // 操作命令
+            "harbor-install", // 安装 Harbor
             "uninstall", // 卸载 Docker
           ],
         },
@@ -131,6 +132,17 @@ const note: ThemeCollectionItem = defineCollection({
             "bash-apk", // 常用命令
             "app-docker", // 安装 Docker
             "app-frp", // 安装 Frp 服务
+          ],
+        },
+        {
+          text: "Debian",
+          icon: "line-md:list",
+          prefix: "debian",
+          // link: "debian/",
+          collapsed: true,
+          items: [
+            "debian-install", // 安装 Debian
+            "debian-config", // 系统配置
           ],
         },
       ],

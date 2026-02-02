@@ -70,6 +70,7 @@ lastUpdated: false
 <RouterLink class="guid-item" to="/note/container/docker/prod-config">生产环境配置</RouterLink>
 <RouterLink class="guid-item" to="/note/container/docker/get-cert">签名私服证书</RouterLink>
 <RouterLink class="guid-item" to="/note/container/docker/docker-bash">操作命令</RouterLink>
+<RouterLink class="guid-item" to="/note/container/docker/harbor-install">安装 Harbor 私服</RouterLink>
 <RouterLink class="guid-item" to="/note/container/docker/uninstall">卸载 Docker</RouterLink>
 </div>
 
@@ -126,6 +127,12 @@ lastUpdated: false
 <RouterLink class="guid-item" to="/note/linux/alpine/bash-apk">相关命令</RouterLink>
 <RouterLink class="guid-item" to="/note/linux/alpine/app-docker">安装 Docker</RouterLink>
 <RouterLink class="guid-item" to="/note/linux/alpine/app-frp">安装 Frp 服务</RouterLink>
+</div>
+
+<div class="guid-group-title"><Icon name="line-md:list" /> Debian</div>
+<div class="guid-items">
+<RouterLink class="guid-item" to="/note/linux/debian/debian-install">系统安装</RouterLink>
+<RouterLink class="guid-item" to="/note/linux/debian/debian-config">配置系统</RouterLink>
 </div>
 
 ## <Icon name="line-md:folder-multiple-filled" /> DevOps

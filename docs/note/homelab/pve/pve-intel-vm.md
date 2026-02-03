@@ -142,8 +142,11 @@ nano /etc/pve/qemu-server/100.conf
 #对于Intel
 args: -set device.hostpci0.addr=02.0 -set device.hostpci0.x-igd-gms=1 -set device.hostpci0.x-igd-opregion=on
 hostpci0: 0000:00:02.0,legacy-igd=1,romfile=vbios_intel_uefi.rom
-#hostpci1: 0000:00:1f.3 # 可选
+
+#hostpci1: 0000:00:1f.3 # 可选声卡
 ```
+
+安装qemu工具
 
 ```
 apt-get install qemu-guest-agent

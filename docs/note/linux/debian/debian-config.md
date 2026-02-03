@@ -3,6 +3,12 @@ title: 配置系统
 createTime: 2026/02/02 23:38:50
 permalink: /note/linux/debian/debian-config/
 ---
+## 将当前用户添加进sudo组
+
+```bash
+sudo usermod -aG sudo xc
+```
+
 ## Root 账户允许远程登录
 
 ```bash
@@ -97,6 +103,30 @@ apt install wget curl vim zip unzip lsb-release tree htop net-tools lsof chrony 
 
 :::
 
-## 安装 intel 显卡驱动
+## 安装 SR-IOV 核显驱动
 
-~未完待续~
+```bash
+
+nano /etc/default/grub
+
+# 在GRUB_CMDLINE_LINUX_DEFAULT后面加上 i915.enable_guc=3
+GRUB_CMDLINE_LINUX_DEFAULT="quiet" # [!code --]
+GRUB_CMDLINE_LINUX_DEFAULT="quiet i915.enable_guc=3" # [!code ++]
+
+# 更新grub
+update-grub
+
+# 安装相关环境和依赖包
+apt install -y dkms vainfo intel-media-va-driver wget firmware-linux linux-headers-$(uname -r)
+
+# 下载sriov驱动
+# https://github.com/strongtz/i915-sriov-dkms
+wget https://github.com/strongtz/i915-sriov-dkms/releases/download/2025.12.10/i915-sriov-dkms_2025.12.10_amd64.deb
+
+# 安装sriov驱动
+sudo dpkg -i i915-sriov-dkms_*_amd64.deb
+
+# 重启
+reboot
+
+···

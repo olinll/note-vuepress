@@ -96,3 +96,7 @@ apt install wget curl vim zip unzip lsb-release tree htop net-tools lsof chrony 
 - **tar**：Linux 常用的打包和解包工具
 
 :::
+
+## 安装 intel 显卡驱动
+
+~未完待续~

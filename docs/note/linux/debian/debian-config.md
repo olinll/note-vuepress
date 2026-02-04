@@ -83,7 +83,7 @@ apt upgrade
 ## 安装必要软件
 
 ```bash
-apt install wget curl vim zip unzip lsb-release tree htop net-tools lsof chrony tar -y
+apt install wget curl vim zip unzip lsb-release tree htop net-tools lsof chrony tar lvm2 parted -y
 ```
 
 **安装 Intel 显卡工具包**
@@ -105,6 +105,8 @@ apt install vainfo intel-gpu-tools -y
 - **lsof**：查看端口或文件被哪个进程占用
 - **chrony**：高精度时间同步服务，保证系统时间准确
 - **tar**：Linux 常用的打包和解包工具
+- **lvm2**: 磁盘管理工具
+- **parted**:磁盘管理工具
 
 :::
 

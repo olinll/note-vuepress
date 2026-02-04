@@ -86,6 +86,11 @@ apt upgrade
 apt install wget curl vim zip unzip lsb-release tree htop net-tools lsof chrony tar -y
 ```
 
+**安装 Intel 显卡工具包**
+```bash
+apt install vainfo intel-gpu-tools -y
+```
+
 :::note
 
 - **wget**：用于从命令行下载文件，适合脚本和大文件拉取

@@ -246,6 +246,7 @@ const note: ThemeCollectionItem = defineCollection({
             "pve-iommu-group-2vm", // IOMMU 优化
             "pve-network-problem", // 网络问题
             "pve-qemu-guest-agent", // QEMU Guest Agent
+            "pve9-sriov", // PVE 9.0 配置指南
           ],
         },
         "baota-depoy-lskypro", //宝塔部署兰空图床

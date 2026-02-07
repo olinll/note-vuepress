@@ -1,5 +1,5 @@
 ---
-title: PVE 9.0 开启SR-IOV
+title: PVE 9.0 配置指南
 createTime: 2026-02-07 19:33:28
 permalink: /note/homelab/pve/pve9-sriov/
 badge: 新

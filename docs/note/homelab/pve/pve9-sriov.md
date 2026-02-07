@@ -269,3 +269,9 @@ Virtio-win 项目定期发布新版本的 Virtio-win 驱动。以下virtio-win�
 
 - 安装 ISO 里面的 `virtio-win-gt-x 64 ` 即可
 - （可选）使用virtio-win-guest tools向导安装QEMU访客代理和SPICE代理，以提升远程查看体验。
+
+**安装intel显卡驱动**
+
+查看网址：[intel.cn](https://www.intel.cn/content/www/cn/zh/search.html#sortCriteria=@lastmodifieddt%20descending&cf-tabfilter=Downloads&cf-downloadsppth=%E6%98%BE%E5%8D%A1)
+
+下载地址：[gfx_win_101.7084.exe](https://downloadmirror.intel.com/873460/gfx_win_101.7084.exe)

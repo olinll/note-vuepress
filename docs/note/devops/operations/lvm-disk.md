@@ -125,6 +125,83 @@ vgdisplay
 
 ```
 
+## 扩容分区
+
+在实际环境时，我们会遇到，硬盘临时扩容的情况。
+
+解决方式分为2种。
+
+1. 把临时扩容的部分创建一个分区，合并到 root 的 lv 里面去
+2. 扩容当前的 lv
+
+```bash title="方法1"
+
+# 1. 查看当前PV情况
+pvdisplay
+
+# 2. 创建新分区（比如 sda3），类型设为 Linux LVM (8e)
+fdisk /dev/sda
+# 创建新主分区 sda3，使用所有剩余空间
+# t 设置类型为 8e
+# w 保存
+
+# 3. 刷新分区表
+partprobe /dev/sda
+
+# 4. 创建物理卷
+pvcreate /dev/sda3
+
+# 5. 扩展到现有卷组
+vgextend debian-vg /dev/sda3
+
+# 6. 扩展逻辑卷
+lvextend -l +100%FREE /dev/debian-vg/root
+
+# 7. 扩展文件系统
+resize2fs /dev/debian-vg/root
+
+```
+```bash title="方法2"
+
+# 检查当前分区表：
+fdisk /dev/sda
+# 按 p 查看分区表。注意 sda5 是从哪个分区扩展的（通常是 sda2的扩展分区）。
+
+# 删除并重建扩展分区（sda2）以包含所有空间：
+## 在 fdisk 中，按 d 删除分区，先删 5（扩展分区内的逻辑分区），再删 2（扩展分区本身）。
+## 按 n 创建新扩展分区（sda2），选择默认起始扇区，并将结束扇区设置为磁盘末尾（直接按回车使用最大空间）。
+## 按 t 将分区类型设置为 5（Extended）。
+
+# 重建逻辑分区 sda5：
+## 在 fdisk 中，按 n 创建逻辑分区（sda5），Partition #5 contains a LVM2_member signature. N 使用默认起始扇区，结束扇区同样设置为磁盘末尾。
+## 按 t 设置分区类型为 8e（Linux LVM）。
+
+# 保存并退出：
+## 按 w 保存更改并退出 fdisk。
+
+# 通知系统分区表变更：
+partprobe /dev/sda
+
+# 扩展物理卷（PV）：
+pvresize /dev/sda5
+
+# 扩展swap
+## 关闭 swap
+swapoff -a
+## 扩展lv
+lvextend -L 4G /dev/debian-vg/swap_1
+## 重新创建swap并启用
+mkswap /dev/debian-vg/swap_1
+swapon /dev/debian-vg/swap_1
+
+#扩展逻辑卷（LV）：
+lvextend -l +100%FREE /dev/debian-vg/root
+
+# 调整文件系统大小：如果是 ext4 文件系统：
+resize2fs /dev/debian-vg/root
+
+```
+
 ## 真机实践
 
 ### 1、查看当前磁盘

@@ -32,7 +32,7 @@ immich智能相册更换支持中文搜索的CLIP大模型教程
 
 Docker-Compose配置，支持Intel核显 OpenVINO
 
-```yaml title="docker-compose.yml"
+```yaml title="docker-compose.yaml"
 
 #
 # WARNING: To install Immich, follow our guide: https://docs.immich.app/install/docker-compose
@@ -135,3 +135,11 @@ DB_USERNAME=postgres
 DB_DATABASE_NAME=immich
 
 ```
+::: tip 将镜像地址修改为第三方加速镜像
+
+```bash
+sed -i 's|ghcr\.io|xxxx-ghcr.xuanyuan.run|g' docker-compose.yml
+sed -i 's|docker\.io|xxxx.xuanyuan.run|g' docker-compose.yml
+```
+
+:::

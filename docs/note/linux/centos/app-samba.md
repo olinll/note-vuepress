@@ -7,6 +7,8 @@ tags:
   - Samba
 ---
 
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/app-samba/)查看
+
 > Samba 是一个开源的软件，它实现了 SMB/CIFS 协议，允许在不同操作系统之间共享文件和打印机。
 
 ## 安装

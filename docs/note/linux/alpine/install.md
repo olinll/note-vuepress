@@ -3,6 +3,9 @@ title: 安装 Alpine
 createTime: 2026/02/01 13:20:34
 permalink: /note/linux/alpine/install/
 ---
+
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/linux-alpine/)查看
+
 起因：站长的服务都是部署在家里，通过Frp映射到公网上的，最近有服务器要到期了，研究了下阿里云的ECS计费，决定使用一款轻量级的Linux系统，购买阿里云 2vCPU 0.5GB的服务器，3年仅需300多，如果使用学生优惠券，基本免费。带宽按量付费，使用CDT（云数据传输），国内每个月20G免费流量，境外每个月220G免费流量。
 
 然而，在 2vCPU 0.5GB 这个“螺蛳壳里做道场”的极限配置下，我们熟悉的 CentOS、Ubuntu 甚至 Debian 都显得有些“富态”了。它们安装后动辄占用数百 MB 内存，留给应用本身的空间已然不多。
@@ -31,7 +34,7 @@ https://dl-cdn.alpinelinux.org/alpine/v3.23/releases/x86_64/alpine-virt-3.23.2-x
 
 2) 导入镜像
 
-前往 [云服务器管理控制台](https://ecs.console.aliyun.com/image/region/cn-hongkong) ，选择到所属的地区，然后选择右上角的 导入镜像
+前往 [云服务器管理控制台](https://ecs.console.aliyun.com/image/region/cn-shanghai) ，选择到所属的地区，然后选择右上角的 导入镜像
 
 ![](./img/alpine-install-878387.png)
 

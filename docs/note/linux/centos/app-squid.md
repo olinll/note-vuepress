@@ -7,6 +7,7 @@ tags:
   - Squid
 ---
 
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/app-squid/)查看
 
 在实际操作的时候，可能遇到服务器没有网络，那么我们就需要在边缘服务器安装一个代理工具
 

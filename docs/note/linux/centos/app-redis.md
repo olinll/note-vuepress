@@ -7,6 +7,9 @@ tags:
   - Redis
 ---
 
+
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/app-redis/)查看
+
 redis版本：6.2.6
 
 通过yum或者rpm包安装，下载文件本地编译，然后配置system文件，使用systemctl进行管理

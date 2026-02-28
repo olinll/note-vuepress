@@ -5,6 +5,9 @@ permalink: /note/linux/centos/installation/
 tags:
   - Centos
 ---
+
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/linux-centos/)查看
+
 ::: note
 
 **Centos停更说明：**

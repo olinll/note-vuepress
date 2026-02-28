@@ -3,6 +3,9 @@ title: 配置系统
 createTime: 2026/02/01 13:26:23
 permalink: /note/linux/alpine/config/
 ---
+
+该文章已迁移至 Olinl Blog，点击[前往](https://blog.olinl.com/posts/linux-alpine/)查看
+
 在安装完 Alpine 系统后，需要进行一些配置，才能正常使用。
 
 ## 设置DNS

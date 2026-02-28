@@ -4,6 +4,8 @@ createTime: 2026/02/01 13:27:33
 permalink: /note/linux/alpine/bash-apk/
 ---
 
+该文章已迁移至 Olinl Blog，点击[前往]()查看
+
 这里记录了 Alpine 系统常用的命令
 
 ## APK命令

@@ -41,7 +41,7 @@ export default defineThemeConfig({
 
   social: [
     { icon: 'github', link: 'https://github.com/olinll' },
-    { icon: 'qq', link: 'https://qm.qq.com/q/vVVAnE1OSe' },
+    { icon: 'qq', link: 'https://2r.hk/q' },
   ],
   navbarSocialInclude: ['github', 'qq'], // 允许显示在导航栏的 social 社交链接
   aside: true, // 页内侧边栏， 默认显示在右侧

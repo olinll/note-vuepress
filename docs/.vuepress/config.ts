@@ -47,7 +47,7 @@ export default defineUserConfig({
        info:[
         {
           username: '顾拾柒',
-          email: '96218030+olinll@users.noreply.github.com',
+          email: 'olinl@foxmail.com',
           avatar: 'https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&spec=0',
           url: 'https://2r.hk',
         },
